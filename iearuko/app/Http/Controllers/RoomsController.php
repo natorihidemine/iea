@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Room;
+use App\Room;
 
 
 class RoomsController extends Controller
@@ -15,7 +15,7 @@ class RoomsController extends Controller
     //
 }
 public function search(){
-  $rooms=Room::paginate(20)->orderBy('id','DESC');
+  $rooms=Room::orderBy('id','ASC')->paginate(20);
   return view('rooms.search')->with('rooms',$rooms);
     //
 }
