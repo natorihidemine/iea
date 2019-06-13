@@ -56,8 +56,7 @@ a.cp_btn:hover {
 
 a.search_btn {
 	display: block;
-	width: 100px;
-	hight:30px;
+	width: 70px;
 	padding: 0.8em;
 	text-align: center;
 	text-decoration: none;
@@ -102,61 +101,10 @@ header #logo a {
 
 /*メインメニューのブロック
 ---------------------------------------------------------------------------*/
-/*メニューブロック*/
-#menubar {
-	overflow: hidden;position: relative;z-index: 10;
-	text-align: center;	/*文字を中央に*/
-	background: #fff;	/*背景色*/
-	border-bottom: 1px solid #eee;	/*下線の幅、線種、色*/
-}
-/*メニュー１個あたりの設定*/
-#menubar ul li {
-	float: left;	/*左に回り込み*/
-	width: 20%;		/*幅。今回は５個メニューがあるので100÷5=20*/
-	font-size: 20px;	/*文字サイズ*/
-}
-#menubar ul li a {
-	text-decoration: none;display: block;
-	border-bottom: 3px solid transparent;	/*下線の設定。ここではtransparentを使って透明にしています。*/
-	height: 75px;		/*メニューブロックの高さ。※※※ここの「75」と、下の行の「15」を合計した「90」の数字と、下のfixmenu設定に２箇所ある「margin-top」の数字を合わせて下さい。*/
-	padding-top: 15px;	/*メニューブロックの高さプラス、上に空ける余白。メニューテキストの上下の配置バランスをここで調整して下さい。※変更の際は、上の行の注意書きもしっかり読んで下さい。*/
-}
-/*飾り文字*/
-#menubar ul li span {
-	display: block;
-	font-size: 10px;	/*文字サイズ*/
-	color: #999;		/*文字色*/
-	letter-spacing: 0.2em;	/*文字間隔を少し広くとる設定*/
-}
-/*マウスオン時と、現在表示中メニューの設定*/
-#menubar ul li a:hover, #menubar ul li.current a {
-	border-bottom: 3px solid #ee82a8;	/*下線の幅、線種、色*/
-}
-/*スマホ用メニューを表示させない*/
-#menubar-s {display: none;}
-/*３本バーアイコンを表示させない*/
-#menubar_hdr {display: none;}
 
 /*fixmenu設定（メニューが画面上部に到達した際のスタイル）
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*上部固定メニュー用fixmenu設定*/
-body.is-fixed-menu #menubar.nav-fix-pos {
-	position: fixed;width: 100%;top: 0px;
-	background: #fff;	/*背景色（古いブラウザ用）*/
-	background: rgba(255,255,255,0.95);	/*背景色。255,255,255は白の事で0.95は透明度。*/
-}
-body.is-fixed-menu #contents {
-	margin-top: 90px;	/*※上の「#menubar ul li a」の注意書きにある数字を指定します。*/
-}
-/*※以下の２ブロックのスタイルの「中身」は、上の２ブロックのスタイルと単純に合わせておいて下さい。fixmenuスクリプトを２つ使う為に必要な設定になります。*/
-body.is-fixed #menubar.nav-fix-pos {
-	position: fixed;width: 100%;top: 0px;
-	background: #fff;	/*背景色（古いブラウザ用）*/
-	background: rgba(255,255,255,0.95);	/*背景色。255,255,255は白の事で0.95は透明度。*/
-}
-body.is-fixed #contents {
-	margin-top: 90px;	/*※上の「#menubar ul li a」の注意書きにある数字を指定します。*/
-}
+
 
 /*コンテンツ（mainとsubを囲むブロック。１カラム時の場合はメインコンテツを囲むブロック。）
 ---------------------------------------------------------------------------*/
@@ -225,13 +173,27 @@ body.is-fixed #contents {
 	padding-top: 0;	/*.linkのpadding-topをリセットしておく*/
 }
 
-#contents .main .kensaku{
+#contents .main .kensaku {
 	text-decoration: none;display: block;overflow: hidden;
 	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
 	font-size:20px;
 }
+
+#contents .main .tochikanmap {
+	text-decoration: none;display: block;overflow: hidden;
+	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
+	padding: 3%;	/*ボックス内の余白*/
+	background: #fff;	/*背景色*/
+	font-size:20px;
+}
+
+#map-canvas {
+  width: 600px ;
+  height: 400px ;
+}
+  </style>
 
 /*物件一覧ページの各ブロック
 ---------------------------------------------------------------------------*/
@@ -247,20 +209,6 @@ body.is-fixed #contents {
 	background: #fff;	/*背景色*/
 }
 
-/*各ボックスの設定（※compactタイプへの追加設定）*/
-#contents .main .list.compact {
-	box-shadow: none;
-	width: 18.4%;			/*幅*/
-	float: left;		/*左に回り込み*/
-	margin-left: 1.3%;	/*左側に空けるスペース*/
-	font-size: 11px;	/*文字サイズ*/
-	line-height: 1.2;	/*行間を狭くする*/
-}
-#contents .main .list.compact a {
-	height: 260px;	/*高さ*/
-	border: none;
-	padding: 0;
-	background: transparent;	/*背景色を透明に*/
 }
 /*ボックス内のh4タグ設定*/
 #contents .main .list h4 {
@@ -354,101 +302,7 @@ body.is-fixed #contents {
 	height: 50px;
 }
 
-/*subコンテンツ
----------------------------------------------------------------------------*/
-/*subブロック*/
-.sub {
-	float: right;	/*右に回り込み*/
-	width: 22%;		/*サブコンテンツの幅*/
-}
-/*h2タグ設定*/
-#contents .sub h2 {
-	margin-bottom: 0;border-radius: 0;
-	font-size: 16px;	/*文字サイズ*/
-	background: #999;	/*背景色*/
-}
-/*h2タグの１文字目への設定*/
-#contents .sub h2::first-letter {
-	border-left: none;
-	padding-left: 0px;
-}
-/*subコンテンツ内の段落タグ設定*/
-#contents .sub p {
-	margin: 0;
-	padding: 10px;
-}
 
-/*サブコンテンツ内のメニュー
----------------------------------------------------------------------------*/
-/*メニュー全体の設定*/
-ul.submenu {
-	margin-bottom: 15px;	/*メニューブロックの下に空けるスペース*/
-	border-top: solid 1px #dcdcdc;	/*上の線の線種、幅、色*/
-}
-/*メニュー１個ごとの設定*/
-ul.submenu li {
-	background: #fff;	/*背景色*/
-	border-bottom: solid 1px #dcdcdc;	/*下の線の線種、幅、色*/
-}
-ul.submenu li a {
-	text-decoration: none;display: block;
-	padding: 2px 15px;	/*メニュー内の余白。上下、左右への設定。*/
-}
-
-/*サブコンテンツ内のbox
----------------------------------------------------------------------------*/
-#contents .sub .box {
-	padding: 15px;			/*ボックス内の余白*/
-	margin-bottom: 15px;	/*ボックスの下に空けるスペース*/
-	background: #f2f2f2;	/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.05);	/*背景色。0,0,0は黒で0.05は透明度。*/
-	border: solid 1px #dcdcdc;	/*線の線種、幅、色*/
-	box-shadow: 0px 0px 1px 1px #fff inset;	/*ボックスの影。内側に白のラインを入れる。*/
-	border-radius: 3px;	/*角丸のサイズ*/
-}
-/*box1内のメニューの設定*/
-#contents .sub .box ul.submenu {
-	margin-bottom: 0px;
-}
-
-/*サブコンテンツ内の物件一覧ブロック
----------------------------------------------------------------------------*/
-/*各ボックスの設定*/
-#contents .sub .list {
-	position: relative;overflow: hidden;
-	font-size: 11px;	/*文字サイズ*/
-	line-height: 1.2;	/*行間を狭くする*/
-}
-#contents .sub .list a {
-	text-decoration: none;display: block;overflow: hidden;
-	padding: 10px;	/*ボックス内の余白*/
-	border-top: 1px solid #dcdcdc;	/*上の線の幅、線種、色*/
-	background: #fff;	/*背景色*/
-}
-/*最後ボックスの設定*/
-#contents .sub .list:last-of-type a {
-	border-bottom: 1px solid #dcdcdc;	/*上の線の幅、線種、色*/
-	margin-bottom: 15px;	/*下に空けるスペース*/
-}
-/*最後ボックスの設定。box内では下に空けるスペースをなくす。*/
-#contents .sub .box .list:last-of-type a {
-	margin-bottom: 0px;	/*下に空けるスペース*/
-}
-/*ボックス内のh4タグ設定*/
-#contents .sub .list h4 {
-	font-size: 13px;
-	margin-bottom: 3px;
-}
-/*ボックス内のp(段落)タグ設定*/
-#contents .sub .list p {
-	padding: 0;
-}
-/*ボックス内の写真設定*/
-#contents .sub .list figure img {
-	float: left;	/*画像を左へ回り込み*/
-	width: 25%;		/*写真の幅*/
-	margin-right: 5px;	/*写真の右側に空ける余白*/
-}
 
 /*フッター設定
 ---------------------------------------------------------------------------*/
