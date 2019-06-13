@@ -15,6 +15,7 @@
   <h3>お部屋の検索条件</h3>
 
 <div class="kensaku">
+
   <div> 賃料  ：  下限
   <select id="language" name="language">
 <option value="en" selected>なし</option>
