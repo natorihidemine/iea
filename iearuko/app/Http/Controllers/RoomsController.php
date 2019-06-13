@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 class RoomsController extends Controller
 {
-  return view('rooms.index');
+  public function index(){
+  return view('rooms.search');
     //
+}
 }
