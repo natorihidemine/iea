@@ -3,7 +3,7 @@
 @section('content')
 
 <div id="contents">
-<span><a href="index.blade">ホーム</a></span><span>＞検索結果一覧</span>
+<span><a href="/rooms/">ホーム</a></span><span>＞検索結果一覧</span>
 
 <div class="inner">
 
@@ -16,7 +16,7 @@
 <h2>検索結果一覧（○○件）</h2>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
@@ -42,14 +42,14 @@
     周辺情報
   </th>
   <td>
-    <a href="index.html" class="cp_btn">土地勘MAP</a>
+    <a href="/rooms/search/show" class="cp_btn">土地勘MAP</a>
   </td>
 </tr>
 </table>
 </div>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
@@ -75,14 +75,14 @@
     周辺情報
   </th>
   <td>
-    <a href="index.html" class="cp_btn">土地勘MAP</a>
+    <a href="/rooms/search/show" class="cp_btn">土地勘MAP</a>
   </td>
 </tr>
 </table>
 </div>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
@@ -108,7 +108,7 @@
     周辺情報
   </th>
   <td>
-    <a href="index.html" class="cp_btn">土地勘MAP</a>
+    <a href="/rooms/search/show" class="cp_btn">土地勘MAP</a>
   </td>
 </tr>
 </table>
