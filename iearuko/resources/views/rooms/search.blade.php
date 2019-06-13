@@ -15,21 +15,22 @@
 
 <h2>検索結果一覧（○○件）</h2>
 
+@foreach ($rooms as $room)
 <div class="list">
-<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
-<h4>物件タイトル</h4>
+<figure><img src="{{ $rooms->image_url }}" alt="写真の説明"></figure>
+<h4>{{ $rooms->name }}</h4>
 <table>
 <tr>
   <th>賃料</th>
-  <td>XXXXX円</td>
+  <td>{{ $rooms->price }}万円</td>
   <th>最寄り</th>
-  <td>XXXX線XXXXX駅</td>
+  <td>{{ $rooms->train1 }}<br>{{ $rooms->train2 }}<br>{{ $rooms->train3 }}</td>
 </tr>
 <tr>
   <th>間取り</th>
-  <td>１LDK</td>
+  <td>{{ $rooms->arrangement }}</td>
   <th>所在地</th>
-  <td>東京都中央区XX町X丁目</td>
+  <td>{{ $rooms->address }}</td>
 </tr>
 <tr>
   <th>
@@ -47,6 +48,7 @@
 </tr>
 </table>
 </div>
+@endforeach
 
 <div class="list">
 <figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
