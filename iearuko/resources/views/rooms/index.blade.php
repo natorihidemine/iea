@@ -59,13 +59,13 @@
   <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" >月島駅</div>
   <div>築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
 <option value="en" selected>指定なし</option>
-<option value="zh"> 新築</option>
-<option value="zh"> 5年以下</option>
-<option value="zh"> 10年以下</option>
-<option value="zh"> 15年以下</option>
-<option value="zh"> 20年以下</option>
-<option value="zh"> 25年以下</option>
-<option value="zh"> 30年以下</option>
+<option value="0"> 新築</option>
+<option value="5"> 5年以下</option>
+<option value="10"> 10年以下</option>
+<option value="15"> 15年以下</option>
+<option value="20"> 20年以下</option>
+<option value="25"> 25年以下</option>
+<option value="30"> 30年以下</option>
 </select></div>
   <a href="/rooms/search" class="search_btn">検索</a>
 </div>
