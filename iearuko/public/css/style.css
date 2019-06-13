@@ -43,12 +43,31 @@ a.cp_btn {
 	padding: 0.8em;
 	text-align: center;
 	text-decoration: none;
-	color: #EC407A;
+	color: #fff;
 	border: 2px solid #ee82a8;
 	border-radius: 3px;
 	transition: .4s;
+	background: #ee82a8;
 }
 a.cp_btn:hover {
+	background: #ee82a8;
+	color: #fff;
+}
+
+a.search_btn {
+	display: block;
+	width: 100px;
+	hight:30px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #ee82a8;
+	border-radius: 3px;
+	transition: .4s;
+	background: #ee82a8;
+}
+a.search_btn:hover {
 	background: #ee82a8;
 	color: #fff;
 }
@@ -206,6 +225,14 @@ body.is-fixed #contents {
 	padding-top: 0;	/*.linkのpadding-topをリセットしておく*/
 }
 
+#contents .main .kensaku{
+	text-decoration: none;display: block;overflow: hidden;
+	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
+	padding: 3%;	/*ボックス内の余白*/
+	background: #fff;	/*背景色*/
+	font-size:20px;
+}
+
 /*物件一覧ページの各ブロック
 ---------------------------------------------------------------------------*/
 /*各ボックスの設定*/
@@ -213,15 +240,13 @@ body.is-fixed #contents {
 	position: relative;overflow: hidden;
 	margin-bottom: 20px;	/*ボックスの下に空ける余白*/
 }
-#contents .main .list a {
+#contents .main .list {
 	text-decoration: none;display: block;overflow: hidden;
 	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
 }
-#contents .main .list a:hover {
-	border: 1px solid #999;	/*マウスオン時の枠線の幅、線種、色*/
-}
+
 /*各ボックスの設定（※compactタイプへの追加設定）*/
 #contents .main .list.compact {
 	box-shadow: none;
@@ -318,6 +343,7 @@ body.is-fixed #contents {
 /*色のついた見出しブロック*/
 #contents .main .list table th {
 	width: 20%;		/*幅*/
+	height: 50px;
 	text-align: center;		/*文字をセンタリング*/
 	font-weight: normal;	/*デフォルトの太字を標準にする設定*/
 	background: #edf0f5;	/*背景色*/
@@ -325,6 +351,7 @@ body.is-fixed #contents {
 /*白い説明用ブロック*/
 #contents .main .list table td {
 	width: 30%;	/*幅*/
+	height: 50px;
 }
 
 /*subコンテンツ

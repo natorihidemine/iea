@@ -24,7 +24,7 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="index.html">家ある〜子   中央区版</a></h1>
+<h1 id="logo"><a href="/rooms/">家ある〜子   中央区版</a></h1>
 </div>
 </header>
 
@@ -32,7 +32,7 @@
 <footer>
 
 <div id="copyright">
-<small>Copyright&copy; <a href="index.html">家ある〜子</a> All Rights Reserved.</small>
+<small>Copyright&copy; <a href="/rooms/">家ある〜子</a> All Rights Reserved.</small>
 <span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </div>
 <!--/#copyright-->
