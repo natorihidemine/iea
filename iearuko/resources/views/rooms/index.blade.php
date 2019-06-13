@@ -15,7 +15,7 @@
   <h3>お部屋の検索条件</h3>
 
 <div class="kensaku">
-
+<form method="POST" action="/rooms/search">
   <div> 賃料  ：  下限
   <select id="language" name="language">
 <option value="en" selected>なし</option>
@@ -57,7 +57,7 @@
 </select>
 </div>
   <div> 間取り：  <input type="checkbox" >ワンルーム<input type="checkbox" >1K<input type="checkbox" >1DK<input type="checkbox" >1LDK<input type="checkbox" >2K<input type="checkbox" >2DK<input type="checkbox" >2LDK<input type="checkbox" >3K<input type="checkbox" >3DK<input type="checkbox" >3LDK<input type="checkbox" >4K以上</div>
-  <div> 路線・駅：XX線　<input type="checkbox" >月島駅</div>
+  <div> 路線・駅：XX線<input type="checkbox" name="stat[]" value="月島駅">月島駅</div>
   <div>築年数：<select id="language" name="language">
 <option value="en" selected>指定なし</option>
 <option value="zh"> 新築</option>
@@ -69,6 +69,7 @@
 <option value="zh"> 30年以下</option>
 </select></div>
   <a href="/rooms/search" class="search_btn">検索</a>
+   <input type="submit" value="送信">
 </div>
 
 </section>

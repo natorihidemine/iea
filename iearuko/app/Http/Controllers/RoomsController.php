@@ -14,8 +14,9 @@ class RoomsController extends Controller
   return view('rooms.index');
     //
 }
-public function search(Request $request){
-  return view('rooms.search');
+public function search(){
+  $rooms=Room::paginate(20)->orderBy('id','DESC');
+  return view('rooms.search')->with('rooms',$rooms);
     //
 }
 public function show(){
