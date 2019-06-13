@@ -18,6 +18,10 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/rooms/search', 'RoomsController@index');
+    Route::get('/rooms', 'RoomsController@index');
+
+    Route::get('/rooms/search', 'RoomsController@search');
+
+    Route::get('/rooms/search/show', 'RoomsController@show');
 
 });

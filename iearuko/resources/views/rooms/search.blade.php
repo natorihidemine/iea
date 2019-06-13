@@ -14,7 +14,7 @@
 <h2>検索結果一覧（○○件）</h2>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
@@ -47,7 +47,7 @@
 </div>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
@@ -80,7 +80,7 @@
 </div>
 
 <div class="list">
-<figure><img src="images/sample1.jpg" alt="写真の説明"></figure>
+<figure><img src="/images/sample1.jpg" alt="写真の説明"></figure>
 <h4>物件タイトル</h4>
 <table>
 <tr>
