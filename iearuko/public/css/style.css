@@ -128,6 +128,7 @@ header #logo a {
 	padding: 5px 20px;	/*上下、左右へのボックス内の余白*/
 	font-size: 20px;	/*文字サイズ*/
 	border-radius: 3px;	/*角丸のサイズ*/
+	width: 122.2%;
 }
 /*h2タグの１文字目*/
 #contents h2::first-letter {
@@ -210,6 +211,7 @@ header #logo a {
 	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
+	width: 120%;
 }
 
 }
@@ -246,33 +248,9 @@ header #logo a {
 /*ボックス内の写真設定*/
 #contents .main .list figure img {
 	float: left;	/*画像を左へ回り込み*/
+	text-align: center;
 	width: 20%;		/*写真の幅*/
 	margin-right: 2%;	/*写真の右側に空ける余白*/
-}
-/*マウスオン時のボックス内の写真設定*/
-#contents .main .list a:hover figure img {
-	opacity: 0.8;	/*透明度80%にする設定*/
-}
-/*ボックス内の写真設定（※compactタイプへの追加設定）*/
-#contents .main .list.compact figure img {
-	float: none;
-	margin: 0;
-	margin-bottom: 10px;
-	border: none;
-	width: auto;
-	padding: 0;
-}
-/*マウスオン時のボックス内の写真設定（※compactタイプへの追加設定）と、ボックスにoption2スタイルが指定された場合の画像の設定。*/
-.list.option2 a:hover figure img,
-.list.option2 figure img {
-	opacity: 0.3 !important;
-}
-/*登録日情報*/
-#contents .main .list .date {
-	display: block;
-	font-size: 11px;	/*文字サイズ*/
-	color: #999;		/*文字色*/
-	text-align: right;	/*テキストを右側に*/
 }
 
 /*一覧ページの各物件ボックス内のテーブル
