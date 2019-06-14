@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="contents">
-<span><a href="/rooms/">ホーム</a></span><span>＞<a href="/rooms/search">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/rooms/">ホーム</a></span><span>＞<a href="/rooms/search">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
 
 <div class="inner">
 
@@ -38,11 +38,23 @@
         }
     });
 </script>
-<div id="google_map" style="width:90%;height:500px"></div>
+<div id="google_map" style="width:70%;height:500px"></div>
 
 
-<div class=checkbox> <input type="checkbox" >コンビニ&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
+<div class=checkbox> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >コンビニ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
 
 </div>
+
+</section>
+
+</div>
+<!--/.main-->
+
+
+</div>
+<!--/.inner-->
+
+</div>
+<!--/#contents-->
 
 @endsection('content')

@@ -191,6 +191,7 @@ header #logo a {
 	background: #fff;	/*背景色*/
 	font-size:20px;
 	display:flex;
+	width: 120% ;
 }
 
 #map-canvas {
@@ -248,7 +249,7 @@ header #logo a {
 /*ボックス内の写真設定*/
 #contents .main .list figure img {
 	float: left;	/*画像を左へ回り込み*/
-	text-align: center;
+	height: 250px;
 	width: 20%;		/*写真の幅*/
 	margin-right: 2%;	/*写真の右側に空ける余白*/
 }
@@ -304,7 +305,8 @@ footer .pr {display: block;font-size: 80%;}
 #footermenu {
 	overflow: hidden;
 	padding: 20px 0;	/*上下、左右へのボックス内の余白*/
-	background: url(../images/footer_logo.png) no-repeat 95% center/12%;	/*フッターイメージ画像の読み込み。左から95%、上下中央に配置。幅12%。*/
+	background: url(../images/footer_logo.png) no-repeat 95% center/12%;	/*
+	フッターイメージ画像の読み込み。左から95%、上下中央に配置。幅12%。*/
 }
 /*リンクテキスト*/
 #footermenu a {
