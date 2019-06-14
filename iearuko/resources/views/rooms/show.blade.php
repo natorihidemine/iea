@@ -13,18 +13,34 @@
 <h2>土地勘MAP 月島荘</h2>
 
 <div class=tochikanmap>
-  <!-- canvas -->
-  <div id="map-canvas"></div>
+<div id="map" style="width: 600px; hight: 400px;"></div>
 
-  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ"></script>
-  <script>
-var mapDiv = document.getElementById( "map-canvas" ) ;
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ" type="text/javascript"></script>
+<script type="text/javascript">
+    //COMTOPIA流Google MAP表示方法
+    var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
+    var address = "東京都中央区月島3丁目26-4";
+    geocoder.geocode({'address': address,'language':'ja'},function(results, status){
+        if (status == google.maps.GeocoderStatus.OK){
+            var latlng=results[0].geometry.location;//緯度と経度を取得
+            var mapOpt = {
+                center: latlng,//取得した緯度経度を地図の真ん中に設定
+                zoom: 15,//地図倍率1～20
+                mapTypeId: google.maps.MapTypeId.ROADMAP//普通の道路マップ
 
-var map = new google.maps.Map( mapDiv, {
-  center: new google.maps.LatLng( 35.7100, 139.8107 ) ,
-  zoom: 11 ,
-} ) ;
-  </script>
+            };
+            var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
+            var marker = new google.maps.Marker({//住所のポイントにマーカーを立てる
+                position: map.getCenter(),
+                map: map
+            });
+        }else{
+            alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
+</script>
+<div id="google_map" style="width:90%;height:500px"></div>
+
 
 <div> <input type="checkbox" >コンビニ&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
 
