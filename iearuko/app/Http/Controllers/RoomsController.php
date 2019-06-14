@@ -20,7 +20,7 @@ public function search(Request $request){
     //
 }
 public function show($id){
-  $rounds=Room::find($address)->get();
+  $round=Room::find($id);
   return view('rooms.show')->with('round',$round);
     //
 }

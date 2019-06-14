@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="contents">
-<span><a href="/rooms/">ホーム</a></span><span>＞<a href="/rooms/search">検索結果一覧</a></span><span>>{物件名}土地勘MAP</span>
+<span><a href="/rooms/">ホーム</a></span><span>＞<a href="/rooms/search">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
 
 <div class="inner">
 
@@ -10,7 +10,7 @@
 
 <section>
 
-<h2>土地勘MAP 月島荘</h2>
+<h2>土地勘MAP {{$round->name}}</h2>
 
 <div class=tochikanmap>
 
@@ -18,7 +18,7 @@
 <script type="text/javascript">
     //COMTOPIA流Google MAP表示方法
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
-    var address = "{$round}";
+    var address = "{{$round->address}}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
         if (status == google.maps.GeocoderStatus.OK){
             var latlng=results[0].geometry.location;//緯度と経度を取得
