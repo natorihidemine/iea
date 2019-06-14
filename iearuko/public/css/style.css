@@ -182,27 +182,18 @@ header #logo a {
 }
 
 #contents .main .tochikanmap {
-	text-decoration: none;
-	display: block;
-	overflow: hidden;
+	text-decoration: none;display: block;overflow: hidden;
 	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
 	font-size:20px;
-	display:flex;
-	width:93.9%;height:500px;
 }
 
-#contents .main .tochikanmap .checkbox {
-	text-decoration: none;
-	display: block;
-	overflow: hidden;
-	padding: 3%;	/*ボックス内の余白*/
-	background: #fff;	/*背景色*/
-	font-size:20px;
-	width:30%;height:500px;
+#map-canvas {
+  width: 600px ;
+  height: 400px ;
 }
-
+  </style>
 
 /*物件一覧ページの各ブロック
 ---------------------------------------------------------------------------*/
