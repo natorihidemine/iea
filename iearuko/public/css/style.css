@@ -54,7 +54,7 @@ a.cp_btn:hover {
 	color: #fff;
 }
 
-a.search_btn {
+.search_btn {
 	display: block;
 	width: 70px;
 	padding: 0.8em;
@@ -65,8 +65,9 @@ a.search_btn {
 	border-radius: 3px;
 	transition: .4s;
 	background: #ee82a8;
+	margin: auto;
 }
-a.search_btn:hover {
+.search_btn:hover {
 	background: #ee82a8;
 	color: #fff;
 }
@@ -179,6 +180,7 @@ header #logo a {
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
 	font-size:20px;
+	width: 100% ;
 }
 
 #contents .main .tochikanmap {

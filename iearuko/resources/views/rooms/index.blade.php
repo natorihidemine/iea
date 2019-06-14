@@ -56,20 +56,8 @@
 <option value="40"> 40万円</option>
 <option value="50"> 50万円</option>
 </select>
-</div>
 
-  <div> 間取り：  <input type="checkbox" >ワンルーム<input type="checkbox" >1K<input type="checkbox" >1DK<input type="checkbox" >1LDK<input type="checkbox" >2K<input type="checkbox" >2DK<input type="checkbox" >2LDK<input type="checkbox" >3K<input type="checkbox" >3DK<input type="checkbox" >3LDK<input type="checkbox" >4K以上</div>
-  <div> 路線・駅：XX線<input type="checkbox" name="stat[]" value="月島駅">月島駅</div>
-  <div>築年数：<select id="language" name="language">
-=======
-  <div> 間取り&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<input type="checkbox" >ワンルーム&nbsp;&nbsp;<input type="checkbox" >1LDK&nbsp;&nbsp;<input type="checkbox" >1DK&nbsp;&nbsp;<input type="checkbox" >1LDK<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >2K&nbsp;&nbsp;<input type="checkbox" >2DK&nbsp;&nbsp;<input type="checkbox" >2LDK<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >3K&nbsp;&nbsp;<input type="checkbox" >3DK&nbsp;&nbsp;<input type="checkbox" >3LDK&nbsp;&nbsp;<input type="checkbox" >4K以上</div>
-
-
-  <form action='/rooms/search' accept_sharset="UTF-8" method="get">
-  <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" name="stat" value="月島駅">月島駅</div>
-  <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" name="stat" value="勝どき駅">勝どき駅</div>
-  <div>築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
 <option value="en" selected>指定なし</option>
 <option value="0"> 新築</option>
 <option value="5"> 5年以下</option>
@@ -78,9 +66,24 @@
 <option value="20"> 20年以下</option>
 <option value="25"> 25年以下</option>
 <option value="30"> 30年以下</option>
-</select></div>
-  <a href="/rooms/search" class="search_btn">検索</a>
-   <input type="submit" value="送信">
+</select>
+
+</div>
+
+  <div> 間取り&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<input type="checkbox" >ワンルーム&nbsp;&nbsp;<input type="checkbox" >1LDK&nbsp;&nbsp;<input type="checkbox" >1DK&nbsp;&nbsp;<input type="checkbox" >1LDK&nbsp;&nbsp;<input type="checkbox" >2K&nbsp;&nbsp;<input type="checkbox" >2DK&nbsp;&nbsp;<input type="checkbox" >2LDK&nbsp;&nbsp;<input type="checkbox" >3K&nbsp;&nbsp;<input type="checkbox" >3DK&nbsp;&nbsp;<input type="checkbox" >3LDK&nbsp;&nbsp;<input type="checkbox" >4K以上</div>
+
+  <form action='/rooms/search' accept_sharset="UTF-8" method="get">
+  <div> 路線・駅：&nbsp;&nbsp;東京メトロ銀座線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="新橋駅">新橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="銀座駅">銀座&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="京橋駅">京橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="日本橋駅">日本橋</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ東西線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="茅場町駅">茅場町</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ半蔵門線&nbsp;&nbsp;<input type="checkbox" name="stat" value="三越前駅">三越前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="水天宮前駅">水天宮前&nbsp;&nbsp;<input type="checkbox" name="stat" value="清澄白河駅">清澄白河</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ日比谷線&nbsp;&nbsp;<input type="checkbox" name="stat" value="東銀座駅">東銀座&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="築地駅">築地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<input type="checkbox" name="stat" value="八丁堀駅">八丁堀&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="茅場町駅">茅場町&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="人形町駅">人形町&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="小伝馬町駅">小伝馬町</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ有楽町線&nbsp;&nbsp;<input type="checkbox" name="stat" value="新富町駅">新富町&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="月島駅">月島</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;都営地下鉄浅草線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="宝町駅">宝町&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="日本橋駅">日本橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="人形町駅">人形町&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="東日本橋駅">東日本橋</div>
+  <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;都営地下鉄大江戸線&nbsp;&nbsp;<input type="checkbox" name="stat" value="汐留駅">汐留&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="築地市場駅">築地市場&nbsp;&nbsp;<input type="checkbox" name="stat" value="勝どき駅">勝どき&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="月島駅">月島&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="清澄白河駅">清澄白河&nbsp;&nbsp;<input type="checkbox" name="stat" value="森下駅">森下</div>
+  <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;都営地下鉄新宿線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="馬喰横山駅">馬喰横山&nbsp;&nbsp;<input type="checkbox" name="stat" value="浜町駅">浜町&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="森下駅">森下&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="越中島駅">越中島</div>
+  <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JR京葉線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat" value="八丁堀駅">八丁堀駅 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JR総武線&nbsp;&nbsp;<input type="checkbox" name="stat" value="馬喰町駅">馬喰町駅&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JR東海道線&nbsp;&nbsp;<input type="checkbox" name="stat" value="新橋駅">新橋駅</div><br>
+
+   <input type="submit" class="search_btn" value="検索">
 
 </form>
 </div>
