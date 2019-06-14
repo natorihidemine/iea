@@ -48,6 +48,7 @@ a.cp_btn {
 	border-radius: 3px;
 	transition: .4s;
 	background: #ee82a8;
+	margin: auto;
 }
 a.cp_btn:hover {
 	background: #ee82a8;
