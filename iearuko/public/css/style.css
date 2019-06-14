@@ -57,8 +57,8 @@ a.cp_btn:hover {
 
 .search_btn {
 	display: block;
-	width: 70px;
-	padding: 0.8em;
+	width: 100px;
+	padding: 0.4em;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
@@ -67,6 +67,9 @@ a.cp_btn:hover {
 	transition: .4s;
 	background: #ee82a8;
 	margin: auto;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 20px ;
 }
 .search_btn:hover {
 	background: #ee82a8;
@@ -120,6 +123,10 @@ a.cp_btn:hover {
 	color: #da3c41;
 }
 
+#search{
+	width:100px;
+	height: 25px;
+}
 /*inner
 ---------------------------------------------------------------------------*/
 .inner {
@@ -229,7 +236,7 @@ header #logo a {
 	padding: 3%;	/*ボックス内の余白*/
 	background: #fff;	/*背景色*/
 	font-size:20px;
-	width: 100% ;
+	width: 120% ;
 }
 
 #contents .main .tochikanmap {
