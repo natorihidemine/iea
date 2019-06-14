@@ -14,8 +14,8 @@ class RoomsController extends Controller
   return view('rooms.index');
     //
 }
-public function search(){
-  $rooms=Room::orderBy('id','ASC')->paginate(20);
+public function search(Request $request){
+  $rooms=Room::where('train1', 'LIKE', "%{$request->stat}%")->orderBy('id','ASC')->paginate(30);
   return view('rooms.search')->with('rooms',$rooms);
     //
 }
