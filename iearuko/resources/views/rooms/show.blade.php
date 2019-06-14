@@ -12,7 +12,8 @@
 
 <h2>土地勘MAP 月島荘</h2>
 
-<div class = tochikanmap>
+<div class=tochikanmap>
+<div id="map" style="width: 600px; hight: 400px;"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ" type="text/javascript"></script>
 <script type="text/javascript">
@@ -38,10 +39,10 @@
         }
     });
 </script>
-<div id="google_map" style="width:75%;height:500px;"></div>
+<div id="google_map" style="width:90%;height:500px"></div>
 
 
-<div class = checkbox > <input type="checkbox" >コンビニ&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
+<div> <input type="checkbox" >コンビニ&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
 
 </div>
 
