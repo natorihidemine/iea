@@ -19,8 +19,9 @@ public function search(Request $request){
   return view('rooms.search')->with('rooms',$rooms);
     //
 }
-public function show(){
-  return view('rooms.show');
+public function show($id){
+  $round=Room::find($id);
+  return view('rooms.show')->with('round',$round);
     //
 }
 }
