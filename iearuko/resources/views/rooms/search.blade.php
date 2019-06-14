@@ -43,7 +43,7 @@
     周辺情報
   </th>
   <td>
-    <a href="/rooms/search/show" class="cp_btn">土地勘MAP</a>
+    <a href="/rooms/search/{{$room->address}}" class="cp_btn">土地勘MAP</a>
   </td>
 </tr>
 </table>

@@ -18,7 +18,7 @@
 <script type="text/javascript">
     //COMTOPIA流Google MAP表示方法
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
-    var address = "東京都中央区月島3丁目26-4";
+    var address = "{$round}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
         if (status == google.maps.GeocoderStatus.OK){
             var latlng=results[0].geometry.location;//緯度と経度を取得

@@ -67,7 +67,7 @@
 
   <form action='/rooms/search' accept_sharset="UTF-8" method="get">
   <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" name="stat" value="月島駅">月島駅</div>
-  <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" name="stat" value="勝どき">勝どき駅</div>
+  <div> 路線・駅：&nbsp;&nbsp;XX線<input type="checkbox" name="stat" value="勝どき駅">勝どき駅</div>
   <div>築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
 
 <option value="en" selected>指定なし</option>
