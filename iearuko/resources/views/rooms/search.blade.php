@@ -13,9 +13,11 @@
 <section>
 
 
-<h2>検索結果一覧（○○件）</h2>
+<h2>検索結果一覧（件）</h2>
 
-@foreach ($rooms as $room)
+@foreach($heya as $hey)
+
+@foreach($hey as $room)
 <div class="list">
 <figure><img src="{{ $room->image }}" alt="写真の説明"></figure>
 <h4>{{ $room->name }}</h4>
@@ -48,8 +50,10 @@
 </tr>
 </table>
 </div>
+
 @endforeach
-{{ $rooms->render() }}
+@endforeach
+
 
 
 </section>
