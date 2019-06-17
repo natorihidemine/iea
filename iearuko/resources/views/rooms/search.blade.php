@@ -39,7 +39,11 @@
     築年数
   </th>
   <td>
+    @if($room->age=="新築")
     {{ $room->age }}
+    @else
+    築{{$room->age}}年
+    @endif
   </td>
     <th>
     周辺情報
