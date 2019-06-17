@@ -16,7 +16,7 @@ body {
 	background: #fff;	/*背景色*/
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+h1,h2,h3,h4,h5,p,ul,ol,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
@@ -127,6 +127,8 @@ a.cp_btn:hover {
 	width:100px;
 	height: 25px;
 }
+
+
 /*inner
 ---------------------------------------------------------------------------*/
 .inner {
@@ -307,6 +309,10 @@ header #logo a {
 	height: 250px;
 	width: 20%;		/*写真の幅*/
 	margin-right: 2%;	/*写真の右側に空ける余白*/
+}
+
+.pagination li{
+    display: inline-block;
 }
 
 /*一覧ページの各物件ボックス内のテーブル
