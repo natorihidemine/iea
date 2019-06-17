@@ -15,8 +15,16 @@ class RoomsController extends Controller
     //
 }
 public function search(Request $request){
-  $rooms=Room::where('train1', 'LIKE', "%{$request->stat}%")->orderBy('id','ASC')->paginate(30);
-  return view('rooms.search')->with('rooms',$rooms);
+  $tests=$request->stat;
+$rooms=array();
+$num=0;
+  foreach($tests as $test){
+  $rooms[$num]=Room::where('train1', 'LIKE', "%{$test}%")->orderBy('id','ASC')->paginate(30);
+$num=$num+1;
+}
+$heya=$rooms;
+
+  return view('rooms.search')->with(array('heya'=>$heya,'rooms'=>$rooms));
     //
 }
 public function show($id){
