@@ -73,7 +73,10 @@
   <div> 間取り&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<input type="checkbox" >ワンルーム&nbsp;&nbsp;<input type="checkbox" >1LDK&nbsp;&nbsp;<input type="checkbox" >1DK&nbsp;&nbsp;<input type="checkbox" >1LDK&nbsp;&nbsp;<input type="checkbox" >2K&nbsp;&nbsp;<input type="checkbox" >2DK&nbsp;&nbsp;<input type="checkbox" >2LDK&nbsp;&nbsp;<input type="checkbox" >3K&nbsp;&nbsp;<input type="checkbox" >3DK&nbsp;&nbsp;<input type="checkbox" >3LDK&nbsp;&nbsp;<input type="checkbox" >4K以上</div>
 
   <form action='/rooms/search' accept_sharset="UTF-8" method="get">
-  
+
+
+    <input type="hidden" name="stat[]" value="">
+
   <div> 路線・駅：&nbsp;&nbsp;東京メトロ銀座線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 新橋駅">新橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 銀座駅">銀座&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 京橋駅">京橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 日本橋駅">日本橋</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ東西線&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 日本橋駅">日本橋&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 茅場町駅">茅場町</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;東京メトロ半蔵門線&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 三越前駅">三越前&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 水天宮前駅">水天宮前&nbsp;&nbsp;<input type="checkbox" name="stat[]" value="線 清澄白河駅">清澄白河</div>
