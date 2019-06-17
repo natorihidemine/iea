@@ -49,6 +49,7 @@
 </table>
 </div>
 @endforeach
+{{ $rooms->render() }}
 
 
 </section>
