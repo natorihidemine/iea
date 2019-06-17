@@ -35,12 +35,8 @@
   <td>{{ $room->address }}</td>
 </tr>
 <tr>
-  <th>
-    築年数
-  </th>
-  <td>
-    XX年
-  </td>
+  <th>築年数</th>
+  <td>{{ $room->age }}</td>
     <th>
     周辺情報
   </th>
