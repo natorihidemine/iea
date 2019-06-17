@@ -19,7 +19,9 @@ public function search(Request $request){
 $rooms=array();
 $num=0;
   foreach($tests as $test){
-  $rooms[$num]=Room::where('train1','LIKE', "%{$test}%")->orWhere('train2','LIKE', "%{$test}%")->orWhere('train1','LIKE', "%{$test}%")->orderBy('id','ASC')->paginate(30);
+    $test=$request->stat[$num];
+  $rooms[$num]=Room::where('train1','LIKE', "%{$test}%")->orWhere('train2','LIKE', "%{$test}%")->orWhere('train3','LIKE', "%{$test}%")->orderBy('id','ASC')->paginate(30);
+
 $num=$num+1;
 }
 $heya=$rooms;
