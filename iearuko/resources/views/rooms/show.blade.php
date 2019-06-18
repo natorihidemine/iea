@@ -34,15 +34,18 @@
 
             };
             var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
-            var marker = new google.maps.Marker({//住所のポイントにマーカーを立てる
-                position: map.getCenter(),
-                map: map
-            });
+          var markerOptions = {
+             map: map,
+            position: map.getCenter(),
+            icon: '/images/homeicon.png', //新しく指定
+          };
+            var marker = new google.maps.Marker(markerOptions);
 
             var request = {
           location: latlng,
           radius: '1500',
           type: ['convenience_store']　 // https://developers.google.com/places/supported_types 参照
+
         };
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, callback);
@@ -70,7 +73,17 @@
 <div id="google_map" style="width:70%;height:500px"></div>
 
 
-<div class=checkbox> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >コンビニ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >スーパー</div>
+<div class=radio_btn>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store" >コンビニ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="grocery_supermarket" >スーパー<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="home_goods_store" >ホームセンター<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="restaurant" >飲食店<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="laundry" >クリーニング・コインランドリー<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="bank,atm" >銀行・ATM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="health" >病院<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
 
 </div>
 
