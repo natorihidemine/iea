@@ -15,23 +15,52 @@ class RoomsController extends Controller
     //
 }
 public function search(Request $request){
-  $tests=$request->stat;
+  $stats=$request->stat;
+  $arranges=$request->arrange;
 $rooms=array();
 $num=0;
-$numb=0;
-  foreach($tests as $test){
-    $test=$request->stat[$num];
-      $tes=$request->stat[$numb];
-  $rooms[$num]=Room::where('train1','LIKE', "%{$test}%")->orWhere('train2','LIKE', "%{$test}%")->orWhere('train3','LIKE', "%{$test}%")->orderBy('id','ASC')->paginate(30);
-
-
-$num=$num+1;
+if($stats[0]==null){
+  $stats[0]="";
 }
-$heya=$rooms;
+if($arranges[0]==null){
+  $arranges[0]="";
+}
+  foreach($stats as $stat){
+ foreach($arranges as $arrange){
+if($arrange==$request->arrange[0]&&$stat==$request->stat[0]){
+ $rooms=Room::where(function($rooms) use($stat, $arrange){
+    $rooms->where('train1', 'LIKE', "%{$stat}%")
+          ->where('arrangement', '=', "$arrange");
 
-  return view('rooms.search')->with(array('heya'=>$heya,'rooms'=>$rooms));
+});
+}else{
+  $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+   $rooms->where('train1', 'LIKE', "%{$stat}%")
+          ->where('arrangement', '=', "$arrange");
+
+});
+}
+$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+   $rooms->where('train2', 'LIKE', "%{$stat}%")
+          ->where('arrangement', '=', "$arrange");
+
+});
+$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+   $rooms->where('train3', 'LIKE', "%{$stat}%")
+          ->where('arrangement', '=', "$arrange");
+
+});
+}
+
+}
+$rooms=$rooms->orderBy('id','ASC')->paginate(30);
+
+
+
+  return view('rooms.search')->with('rooms',$rooms);
     //
 }
+
 public function show($id){
   $round=Room::find($id);
   return view('rooms.show')->with('round',$round);

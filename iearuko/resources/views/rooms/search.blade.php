@@ -15,9 +15,8 @@
 
 <h2>検索結果一覧（件）</h2>
 
-@foreach($heya as $hey)
 
-@foreach($hey as $room)
+@foreach($rooms as $room)
 <div class="list">
 <figure><img src="{{ $room->image }}" alt="写真の説明"></figure>
 <h4>{{ $room->name }}</h4>
@@ -56,7 +55,7 @@
 </div>
 
 @endforeach
-@endforeach
+
 
 
 
