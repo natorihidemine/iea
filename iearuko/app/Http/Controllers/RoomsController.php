@@ -55,8 +55,6 @@ $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
 }
 $rooms=$rooms->orderBy('id','ASC')->paginate(30);
 
-
-
   return view('rooms.search')->with('rooms',$rooms);
     //
 }
