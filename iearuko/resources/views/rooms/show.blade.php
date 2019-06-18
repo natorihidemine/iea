@@ -37,7 +37,7 @@
           var markerOptions = {
              map: map,
             position: map.getCenter(),
-            icon: '/images/homeicon.jpeg', //新しく指定
+            icon: '/images/homeicon.png', //新しく指定
           };
             var marker = new google.maps.Marker(markerOptions);
 
