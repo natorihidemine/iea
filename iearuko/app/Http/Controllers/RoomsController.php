@@ -30,24 +30,24 @@ if($arranges[0]==null){
 if($arrange==$request->arrange[0]&&$stat==$request->stat[0]){
  $rooms=Room::where(function($rooms) use($stat, $arrange){
     $rooms->where('train1', 'LIKE', "%{$stat}%")
-          ->where('arrangement', '=', "$arrange");
+          ->where('arrangement', 'LIKE', "%{$arrange}%");
 
 });
 }else{
   $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
    $rooms->where('train1', 'LIKE', "%{$stat}%")
-          ->where('arrangement', '=', "$arrange");
+          ->where('arrangement', 'LIKE', "%{$arrange}%");
 
 });
 }
 $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
    $rooms->where('train2', 'LIKE', "%{$stat}%")
-          ->where('arrangement', '=', "$arrange");
+          ->where('arrangement', 'LIKE', "%{$arrange}%");
 
 });
 $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
    $rooms->where('train3', 'LIKE', "%{$stat}%")
-          ->where('arrangement', '=', "$arrange");
+          ->where('arrangement', 'LIKE', "%{$arrange}%");
 
 });
 }
