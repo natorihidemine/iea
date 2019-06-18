@@ -34,15 +34,18 @@
 
             };
             var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
-            var marker = new google.maps.Marker({//住所のポイントにマーカーを立てる
-                position: map.getCenter(),
-                map: map
-            });
+          var markerOptions = {
+             map: map,
+            position: map.getCenter(),
+            icon: '/images/homeicon.jpeg', //新しく指定
+          };
+            var marker = new google.maps.Marker(markerOptions);
 
             var request = {
           location: latlng,
           radius: '1500',
           type: ['convenience_store']　 // https://developers.google.com/places/supported_types 参照
+
         };
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, callback);
