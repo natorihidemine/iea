@@ -16,8 +16,8 @@
 
 <div class="kensaku">
 <form action='/rooms/search' accept_sharset="UTF-8" method="get">
-  <div> 賃料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;下限
-  <select type="price" name="min">
+  <div> 賃料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;下限&nbsp;&nbsp;
+  <select  type="price" name="min">
 <option value=0 selected>なし</option>
 <option value=3 >3万円</option>
 <option value=4> 4万円</option>
@@ -37,7 +37,7 @@
 <option value=50> 50万円</option>
 
 </select>
-〜上限<select type="price" name="max">
+〜&nbsp;上限&nbsp;&nbsp;<select type="price" name="max">
 <option value=10000000000000000000 selected>なし</option>
 <option value=3 >3万円</option>
 <option value=4> 4万円</option>
