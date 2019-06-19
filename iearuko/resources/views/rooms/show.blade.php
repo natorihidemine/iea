@@ -9,7 +9,7 @@
 
 <div class="main">
 
-<section>
+<section> 
 
 <h2>土地勘MAP {{$round->name}}</h2>
 
