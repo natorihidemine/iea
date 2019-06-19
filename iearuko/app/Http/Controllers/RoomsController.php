@@ -17,6 +17,8 @@ class RoomsController extends Controller
 public function search(Request $request){
   $stats=$request->stat;
   $arranges=$request->arrange;
+  $min=$request->min;
+  $max=$request->max;
 $rooms=array();
 $num=0;
 if($stats[0]==null){
@@ -28,26 +30,34 @@ if($arranges[0]==null){
   foreach($stats as $stat){
  foreach($arranges as $arrange){
 if($arrange==$request->arrange[0]&&$stat==$request->stat[0]){
- $rooms=Room::where(function($rooms) use($stat, $arrange){
+ $rooms=Room::where(function($rooms) use($stat, $arrange,$min,$max){
     $rooms->where('train1', 'LIKE', "%{$stat}%")
-          ->where('arrangement', 'LIKE', "%{$arrange}%");
+          ->where('arrangement', 'LIKE', "%{$arrange}%")
+          ->where('price','>=',$min)
+          ->where('price','<=',$max);
 
 });
 }else{
-  $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+  $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange,$min,$max){
    $rooms->where('train1', 'LIKE', "%{$stat}%")
-          ->where('arrangement', 'LIKE', "%{$arrange}%");
+          ->where('arrangement', 'LIKE', "%{$arrange}%")
+          ->where('price','>=',$min)
+          ->where('price','<=',$max);
 
 });
 }
-$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange,$min,$max){
    $rooms->where('train2', 'LIKE', "%{$stat}%")
-          ->where('arrangement', 'LIKE', "%{$arrange}%");
+          ->where('arrangement', 'LIKE', "%{$arrange}%")
+          ->where('price','>=',$min)
+          ->where('price','<=',$max);
 
 });
-$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange){
+$rooms=$rooms->orWhere(function($rooms) use($stat,$arrange,$min,$max){
    $rooms->where('train3', 'LIKE', "%{$stat}%")
-          ->where('arrangement', 'LIKE', "%{$arrange}%");
+          ->where('arrangement', 'LIKE', "%{$arrange}%")
+          ->where('price','>=',$min)
+          ->where('price','<=',$max);
 
 });
 }

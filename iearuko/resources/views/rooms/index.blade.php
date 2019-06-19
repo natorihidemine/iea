@@ -15,46 +15,46 @@
   <h3>お部屋の検索条件</h3>
 
 <div class="kensaku">
-
+<form action='/rooms/search' accept_sharset="UTF-8" method="get">
   <div> 賃料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;下限
-  <select id="price" name="min">
-<option value="なし" selected>なし</option>
-<option value="3" >3万円</option>
-<option value="4"> 4万円</option>
-<option value="5"> 5万円</option>
-<option value="6"> 6万円</option>
-<option value="7"> 7万円</option>
-<option value="8"> 8万円</option>
-<option value="9"> 9万円</option>
-<option value="10"> 10万円</option>
-<option value="12.5"> 12.5万円</option>
-<option value="15"> 15万円</option>
-<option value="17.5"> 17.5万円</option>
-<option value="20"> 20万円</option>
-<option value="25"> 25万円</option>
-<option value="30"> 30万円</option>
-<option value="40"> 40万円</option>
-<option value="50"> 50万円</option>
+  <select type="price" name="min">
+<option value=0 selected>なし</option>
+<option value=3 >3万円</option>
+<option value=4> 4万円</option>
+<option value=5> 5万円</option>
+<option value=6> 6万円</option>
+<option value=7> 7万円</option>
+<option value=8> 8万円</option>
+<option value=9> 9万円</option>
+<option value=10> 10万円</option>
+<option value=12.5> 12.5万円</option>
+<option value=15> 15万円</option>
+<option value=17.5> 17.5万円</option>
+<option value=20> 20万円</option>
+<option value=25> 25万円</option>
+<option value=30> 30万円</option>
+<option value=40> 40万円</option>
+<option value=50> 50万円</option>
 
 </select>
-〜上限<select id="price" name="max">
-<option value="なし" selected>なし</option>
-<option value="3" >3万円</option>
-<option value="4"> 4万円</option>
-<option value="5"> 5万円</option>
-<option value="6"> 6万円</option>
-<option value="7"> 7万円</option>
-<option value="8"> 8万円</option>
-<option value="9"> 9万円</option>
-<option value="10"> 10万円</option>
-<option value="12.5"> 12.5万円</option>
-<option value="15"> 15万円</option>
-<option value="17.5"> 17.5万円</option>
-<option value="20"> 20万円</option>
-<option value="25"> 25万円</option>
-<option value="30"> 30万円</option>
-<option value="40"> 40万円</option>
-<option value="50"> 50万円</option>
+〜上限<select type="price" name="max">
+<option value=0 selected>なし</option>
+<option value=3 >3万円</option>
+<option value=4> 4万円</option>
+<option value=5> 5万円</option>
+<option value=6> 6万円</option>
+<option value=7> 7万円</option>
+<option value=8> 8万円</option>
+<option value=9> 9万円</option>
+<option value=10> 10万円</option>
+<option value=12.5> 12.5万円</option>
+<option value=15> 15万円</option>
+<option value=17.5> 17.5万円</option>
+<option value=20> 20万円</option>
+<option value=25> 25万円</option>
+<option value=30> 30万円</option>
+<option value=40> 40万円</option>
+<option value=50> 50万円</option>
 </select>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
