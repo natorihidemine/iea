@@ -44,22 +44,41 @@
             var request = {
           location: latlng,
           radius: '1500',
-          type: ['convenience_store']　 // https://developers.google.com/places/supported_types 参照
+          type: ['convenience_store'] // https://developers.google.com/places/supported_types 参照
 
         };
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, callback);
+
+        function createMarker(latlng, icn, place)
+      {
+        // マーカー作成https://developers.google.com/maps/documentation/javascript/examples/marker-simple参照
+        var marker_around = new google.maps.Marker({
+          position: latlng,
+          map: map,
+        });
+        var placename = place.name;
+// 吹き出しにカフェの名前を埋め込む
+      var contentString = `<div class="sample"><p id="place_name">${placename}</p></div>`;
+
+     // 吹き出し
+      var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+      content:  contentString// 吹き出しに表示する内容
+    });
+
+
+    marker_around.addListener('click', function() { // マーカーをクリックしたとき
+      infoWindow.open(map, marker_around); // 吹き出しの表示
+    });
+      }
 
         function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
             latlng = place.geometry.location;
-            icn = place.icon;
-            var marker = new google.maps.Marker({//住所のポイントにマーカーを立てる
-                position: latlng,
-                map: map
-            });
+            var icn = place.icon;
+            createMarker(latlng, icn, place);
           }
         }
       }
