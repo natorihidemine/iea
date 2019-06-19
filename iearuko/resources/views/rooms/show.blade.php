@@ -8,7 +8,7 @@
 
 <div class="main">
 
-<section>
+<section> 
 
 <h2>土地勘MAP {{$round->name}}</h2>
 <input id="pac-input" class="controls" type="text" placeholder="フリーワード">
