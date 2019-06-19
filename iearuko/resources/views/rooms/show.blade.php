@@ -13,12 +13,13 @@
 
 <h2>土地勘MAP {{$round->name}}</h2>
 
-<input id="pac-input" class="controls" type="text" placeholder="フリーワード">
+
 <div class=tochikanmap>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ&libraries=places" type="text/javascript"></script>
 <script src="{{ asset('assets/javascripts/jquery-3.4.1.js') }}"></script>
+
 <script type="text/javascript">
     //COMTOPIA流Google MAP表示方法
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
@@ -273,11 +274,10 @@ function createMarker(latlng, icn, place)
 </script>
 <div id="google_map" style="width:70%;height:500px"></div>
 
-
 <div class=radio_btn>
   <form name="maptestform">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="grocery_supermarket" >スーパー<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="supermarket" >スーパー<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="home_goods_store" >ホームセンター<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="restaurant" >飲食店<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="laundry" >クリーニング・コインランドリー<br>
@@ -287,6 +287,7 @@ function createMarker(latlng, icn, place)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
 </form>
+
 </div>
 
 </section>
