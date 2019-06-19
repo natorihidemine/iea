@@ -19,7 +19,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ&libraries=places" type="text/javascript"></script>
 <script src="{{ asset('assets/javascripts/jquery-3.4.1.js') }}"></script>
-
+<input id="pac-input" class="controls" type="text" placeholder="フリーワード">
 <script type="text/javascript">
     //COMTOPIA流Google MAP表示方法
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
