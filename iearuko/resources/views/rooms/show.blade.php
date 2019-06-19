@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
- 
+
 <div id="contents">
 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/rooms/">ホーム</a></span><span>＞<a href="#" onclick="window.history.back(); return false;">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
 
@@ -9,7 +9,7 @@
 
 <div class="main">
 
-<section> 
+<section>
 
 <h2>土地勘MAP {{$round->name}}</h2>
 
@@ -19,7 +19,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ&libraries=places" type="text/javascript"></script>
 <script src="{{ asset('assets/javascripts/jquery-3.4.1.js') }}"></script>
-<input id="pac-input" class="controls" type="text" placeholder="フリーワード">
+
 <script type="text/javascript">
     //COMTOPIA流Google MAP表示方法
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
@@ -47,7 +47,7 @@
 
             var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(input);
+        map.controls[google.maps.ControlPosition.TOP_RIGHT];
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -105,6 +105,7 @@
 
 
 $('input[type=radio]').click(function(){
+
 var address = "{{$round->address}}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
         if (status == google.maps.GeocoderStatus.OK){
@@ -126,7 +127,7 @@ var marker = new google.maps.Marker(markerOptions);
 
 var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(input);
+        map.controls[google.maps.ControlPosition.TOP_RIGHT];
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -275,6 +276,7 @@ function createMarker(latlng, icn, place)
 <div id="google_map" style="width:70%;height:500px"></div>
 
 <div class=radio_btn>
+  <input id="pac-input" class="controls" type="text" placeholder="フリーワード">
   <form name="maptestform">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="supermarket" >スーパー<br>
