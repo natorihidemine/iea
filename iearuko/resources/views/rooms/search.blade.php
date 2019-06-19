@@ -13,7 +13,7 @@
 <section>
 
 
-<h2>検索結果一覧（件）</h2>
+<h2>検索結果一覧（{{count($rooms)}}件）</h2>
 
 
 @foreach($rooms as $room)
