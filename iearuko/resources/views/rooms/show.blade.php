@@ -276,14 +276,15 @@ function createMarker(latlng, icn, place)
 <div id="google_map" style="width:70%;height:500px"></div>
 
 <div class=radio_btn>
-  <input id="pac-input" class="controls" type="text" placeholder="フリーワード">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;フリーワード検索<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<input id="pac-input" class="controls" type="text" placeholder="例）もんじゃ">
   <form name="maptestform">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="supermarket" >スーパー<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="home_goods_store" >ホームセンター<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="restaurant" >飲食店<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="laundry" >クリーニング・コインランドリー<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="bank" >銀行・ATM<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="bank" >銀行<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="hospital" >病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
