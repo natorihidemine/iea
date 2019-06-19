@@ -38,7 +38,7 @@
 
 </select>
 〜上限<select type="price" name="max">
-<option value=0 selected>なし</option>
+<option value=10000000000000000000 selected>なし</option>
 <option value=3 >3万円</option>
 <option value=4> 4万円</option>
 <option value=5> 5万円</option>
@@ -57,15 +57,15 @@
 <option value=50> 50万円</option>
 </select>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select id="language" name="language">
-<option value="en" selected>指定なし</option>
-<option value="0"> 新築</option>
-<option value="5"> 5年以下</option>
-<option value="10"> 10年以下</option>
-<option value="15"> 15年以下</option>
-<option value="20"> 20年以下</option>
-<option value="25"> 25年以下</option>
-<option value="30"> 30年以下</option>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;築年数&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;<select type="age" name="age">
+<option value=1000000 selected>指定なし</option>
+<option value=0> 新築</option>
+<option value=5> 5年以下</option>
+<option value=10> 10年以下</option>
+<option value=15> 15年以下</option>
+<option value=20> 20年以下</option>
+<option value=25> 25年以下</option>
+<option value=30> 30年以下</option>
 </select>
 
 </div>

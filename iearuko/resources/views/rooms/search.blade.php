@@ -38,8 +38,8 @@
     築年数
   </th>
   <td>
-    @if($room->age="新築")
-    {{ $room->age }}
+    @if($room->age==0)
+    新築
     @else
     築{{$room->age}}年
     @endif
