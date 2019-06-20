@@ -9,10 +9,17 @@
 
 
 <div class="main">
-  <h2> 中央区の賃貸物件を探す</h2>
+  <div class="slide" id="makeImg">
+  <img src="/images/tokyo.jpg">
+  <img src="/images/toyosuview.jpg">
+  <img src="/images/towerman.jpg">
+  <img src="/images/kachidoki.jpg">
+</div>
+  <p>&nbsp;&nbsp;</p>
+  <h2> お部屋の検索条件</h2>
 
 <section>
-  <h3>お部屋の検索条件</h3>
+
 
 <div class="kensaku">
 <form action='/rooms/search' accept_sharset="UTF-8" method="get">
