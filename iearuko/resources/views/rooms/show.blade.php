@@ -144,8 +144,12 @@ function createMarker(latlng, icn, place)
         });
         var placename = place.name;
         var placetypes = place.types;
+        if(place.photos && place.photos.length>=1){
+              var placephotos = place.photos[0].getUrl();;
 // 吹き出しにカフェの名前を埋め込む
-      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p>${placetypes}</p></div>`;
+      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p></div>`;
+    }
+    else{var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p></div>`}
 
      // 吹き出し
       var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
