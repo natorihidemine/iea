@@ -204,6 +204,42 @@ header #logo a {
 
 /*コンテンツ（mainとsubを囲むブロック。１カラム時の場合はメインコンテツを囲むブロック。）
 ---------------------------------------------------------------------------*/
+/*=== 画像の表示エリア ================================= */
+.slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 1300px;
+  height     : 450px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #fff;
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    :0;
+  animation  : slideAnime 16s ease infinite;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 4s }
+.slide img:nth-of-type(3) { animation-delay: 8s }
+.slide img:nth-of-type(4) { animation-delay: 12s }
+
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0 }
+   2% { opacity: 1 }
+  25% { opacity: 1 }
+  27% { opacity: 0 }
+ 100% { opacity: 0 }
+}
 #contents {
 	position: relative;z-index: 1;
 	overflow: hidden;
