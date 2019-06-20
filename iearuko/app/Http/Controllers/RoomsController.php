@@ -68,9 +68,11 @@ $rooms=$rooms->orWhere(function($rooms) use($stat,$arrange,$min,$max,$age){
 }
 
 }
-$rooms=$rooms->orderBy('id','ASC')->paginate(30);
+$roo=$rooms->orderBy('id','ASC')->get();
+$rooms=$rooms->orderBy('id','ASC')->paginate(5);
 
-  return view('rooms.search')->with('rooms',$rooms);
+
+  return view('rooms.search')->with(array('rooms'=>$rooms,'roo'=>$roo,'stats'=>$stats,'arranges'=>$arranges));
     //
 }
 
