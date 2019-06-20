@@ -167,6 +167,10 @@ a.cp_btn:hover {
       #target {
         width: 345px;
       }
+      .image_arounds {
+      max-width: 200px;
+      max-height: 100px;
+      }
 /*inner
 ---------------------------------------------------------------------------*/
 .inner {
