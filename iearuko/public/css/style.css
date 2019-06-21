@@ -229,7 +229,7 @@ header #logo a {
   opacity    :0;
   animation  : slideAnime 16s ease infinite;
 }
- 
+
  /*=== スライドのアニメーションを段差で開始する ========= */
 .slide img:nth-of-type(1) { animation-delay: 0s }
 .slide img:nth-of-type(2) { animation-delay: 4s }
@@ -333,7 +333,18 @@ header #logo a {
   width: 600px ;
   height: 400px ;
 }
-  </style>
+
+.box_srcollbar {
+        overflow:auto;
+        width:900px;
+        height:300px;
+        padding:5px;
+        border:1px  #696969;
+        background-color:#fff;
+        color:#999;
+        font-size:18px;
+    }
+
 
 /*物件一覧ページの各ブロック
 ---------------------------------------------------------------------------*/
