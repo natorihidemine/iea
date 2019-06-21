@@ -103,9 +103,18 @@
           map.fitBounds();
         });
 
-
-$('input[type=radio]').click(function(){
-
+var r = $('input[name=tori]:checked').val();
+$('input[name=tori]').click(function(){
+if($(this).val() == r) {
+  if(r!=false){
+            $(this).prop('checked', false);
+            r = false;
+          }else{
+            r = $(this).val();
+          }
+        } else {
+            r = $(this).val();
+        }
 var address = "{{$round->address}}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
         if (status == google.maps.GeocoderStatus.OK){
@@ -182,7 +191,7 @@ var input = document.getElementById('pac-input');
           map.fitBounds();
         });
 
-var r = $('[name=tori]:checked').val();
+if(r!=false){
 var request = {
           location: latlng,
           radius: '1500',
@@ -190,6 +199,7 @@ var request = {
         };
         service = new google.maps.places.PlacesService(map);
 service.nearbySearch(request,callback);
+}
 
 function createMarker(latlng, icn, place)
       {
