@@ -281,7 +281,7 @@ function createMarker(latlng, icn, place)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
-<img src="/images/iearukochann.jpg"style="float:right; height:150px; padding: 350px 0 0 0;">
+<img src="/images/iearukochann.jpg"style="float:right; height:200px; padding: 300px 0 0 0;">
 </form>
 </div>
 

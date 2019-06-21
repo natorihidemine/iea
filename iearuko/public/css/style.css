@@ -148,7 +148,7 @@ a.cp_btn:hover {
         margin-left: 12px;
         padding: 0 11px 0 13px;
         text-overflow: ellipsis;
-        width: 200px;
+        width: 150px;
         margin: 10px 10px;
         height: 35px;
       }
@@ -336,7 +336,7 @@ header #logo a {
 
 .box_srcollbar {
         overflow:auto;
-        width:900px;
+        width:75%;
         height:300px;
         padding:5px;
         border:1px  #696969;
