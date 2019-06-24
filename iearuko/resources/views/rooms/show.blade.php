@@ -210,10 +210,11 @@ function createMarker(latlng, icn, place)
         });
         var placename = place.name;
         var placetypes = place.types;
+            var ot = directions.getDuration();
                 if(place.photos && place.photos.length>=1){
               var placephotos = place.photos[0].getUrl();
 // 吹き出しにカフェの名前を埋め込む
-      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p></div>`;
+      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>${ot}</p></div>`;
     }
     else{var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p></div>`}
 
@@ -224,6 +225,7 @@ function createMarker(latlng, icn, place)
 
 
     marker_around.addListener('click', function() { // マーカーをクリックしたとき
+
       infoWindow.open(map, marker_around); // 吹き出しの表示
     });
       }
@@ -281,41 +283,7 @@ function createMarker(latlng, icn, place)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
-<img id="okiru" src="/images/iearukochann.jpg" onclick="changeIMG()" style="cursor: pointer;
-cursor: hand; float:right; height:200px; padding: 300px 0 0 0;">
-
-<script>
-
-//画像を配列に格納する
-var img = new Array();
-
-img[0] = new Image();
-img[0].src = "/images/nemu_arukochan.jpg";
-img[1] = new Image();
-img[1].src = "/images/iearukochann.jpg";
-
-
-
-//画像番号用のグローバル変数
-var cnt=0;
-
-
-//画像切り替え関数
-function changeIMG(){
-
-  //画像番号を進める
-  if (cnt == 1)
-  { cnt=0; }
-  else
-  { cnt++; }
-
-  //画像を切り替える
-  document.getElementById("okiru").src=img[cnt].src;
-}
-
-</script>
-
-
+<img src="/images/iearukochann.jpg"style="float:right; height:200px; padding: 300px 0 0 0;">
 </form>
 </div>
 
