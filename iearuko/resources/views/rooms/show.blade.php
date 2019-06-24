@@ -103,6 +103,20 @@
           map.fitBounds();
         });
 
+        var myInfoWindow = new google.maps.InfoWindow({
+    // 吹き出しに出す文
+    content: "新宿駅で～す"
+  });
+  // 吹き出しを開く
+  myInfoWindow.open(myMap, markers);
+  // 吹き出しが閉じられたら、マーカークリックで再び開くようにしておく
+  google.maps.event.addListener(myInfoWindow, "closeclick", function() {
+    google.maps.event.addListenerOnce(markers, "click", function(event) {
+      myInfoWindow.open(map, markers);
+    });
+  });
+
+
 var r = $('input[name=tori]:checked').val();
 $('input[name=tori]').click(function(){
 if($(this).val() == r) {
@@ -281,7 +295,40 @@ function createMarker(latlng, icn, place)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
-<img src="/images/iearukochann.jpg"style="float:right; height:200px; padding: 300px 0 0 0;">
+<img src="/images/iearukochann.jpg" id="okiru" onclick="changeIMG()" style="float:right; height:200px; padding: 300px 0 0 0;">
+
+<script>
+
+//画像を配列に格納する
+var img = new Array();
+
+img[0] = new Image();
+img[0].src = "/images/iearukochann.jpg";
+img[1] = new Image();
+img[1].src = "/images/nemu_arukochan.jpg";
+
+
+
+//画像番号用のグローバル変数
+var cnt=0;
+
+
+//画像切り替え関数
+function changeIMG(){
+
+  //画像番号を進める
+  if (cnt == 1)
+  { cnt=0; }
+  else
+  { cnt++; }
+
+  //画像を切り替える
+  document.getElementById("okiru").src=img[cnt].src;
+}
+
+</script>
+
+
 </form>
 </div>
 
