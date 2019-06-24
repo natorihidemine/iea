@@ -16,6 +16,8 @@
   <img src="/images/kachidoki.jpg">
 </div>
   <p>&nbsp;&nbsp;</p>
+
+<br>
   <h2> お部屋の検索条件</h2>
 
 <section>
@@ -80,7 +82,9 @@
 <form action='/rooms/search' accept_sharset="UTF-8" method="get">
 
   <div> 間取り&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;
-    <input type="checkbox" name="arrange[]" value="ワンルーム">ワンルーム&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1K">1K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1DK">1DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1LDK">1LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2K">2K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2DK">2DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2LDK">2LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3K">3K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3DK">3DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3LDK">3LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="K ">4K以上</div><img src="/images/ienashikochan.jpg"style="float:right; height: 100%; width:18%; padding: 80px 0 0 0;">
+    <input type="checkbox" name="arrange[]" value="ワンルーム">ワンルーム&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1K">1K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1DK">1DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="1LDK">1LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2K">2K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2DK">2DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="2LDK">2LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3K">3K&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3DK">3DK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="3LDK">3LDK&nbsp;&nbsp;<input type="checkbox" name="arrange[]" value="K ">4K以上</div>
+
+    <a href="/rooms/story"><img src="/images/ienashikochan.jpg"  style="float:right; height: 100%; width:18%; padding: 80px 0 0 0;"></a>
 
 <div >路線・駅：</div>
   <div class="box_srcollbar">
@@ -122,6 +126,8 @@ window.addEventListener("load", function() {
 
 </script>
 </div>
+
+
 </section>
 
 </div>

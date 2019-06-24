@@ -14,6 +14,7 @@ class RoomsController extends Controller
   return view('rooms.index');
     //
 }
+
 public function search(Request $request){
   $stats=$request->stat;
   $arranges=$request->arrange;
@@ -73,6 +74,11 @@ $rooms=$rooms->orderBy('id','ASC')->paginate(5);
 
 
   return view('rooms.search')->with(array('rooms'=>$rooms,'roo'=>$roo,'stats'=>$stats,'arranges'=>$arranges));
+    //
+}
+
+public function story(){
+  return view('rooms.story');
     //
 }
 
