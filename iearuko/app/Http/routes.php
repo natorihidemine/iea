@@ -22,6 +22,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/rooms/search', 'RoomsController@search');
 
+    Route::get('/rooms/story', 'RoomsController@story');
+
     Route::get('/rooms/search/{id}', 'RoomsController@show');
 
 });
