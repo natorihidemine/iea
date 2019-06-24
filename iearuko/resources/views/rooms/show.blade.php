@@ -25,7 +25,7 @@
     var geocoder = new google.maps.Geocoder();//Geocode APIを使います。
     var service;
     var infowindow;
-
+var currentInfoWindow = null;
 
     var address = "{{$round->address}}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
@@ -42,6 +42,7 @@
              map: map,
             position: map.getCenter(),
             icon: '/images/homeicon.png', //新しく指定
+            disableAutoPan: true,
           };
             var marker = new google.maps.Marker(markerOptions);
 
@@ -213,9 +214,9 @@ function createMarker(latlng, icn, place)
                 if(place.photos && place.photos.length>=1){
               var placephotos = place.photos[0].getUrl();
 // 吹き出しにカフェの名前を埋め込む
-      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p></div>`;
+      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>所要時間: <span id="total"></span></p></div>`;
     }
-    else{var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p></div>`}
+    else{var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p>所要時間: <span id="total"></span></p></div>`}
 
      // 吹き出し
       var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
@@ -224,9 +225,52 @@ function createMarker(latlng, icn, place)
 
 
     marker_around.addListener('click', function() { // マーカーをクリックしたとき
+
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer({
+  });
+
+  directionsDisplay.addListener('directions_changed', function() {
+    computeTotalDistance(directionsDisplay.getDirections());
+  });
+
+  displayRoute('{{$round->address}}', placename, directionsService,
+      directionsDisplay);
+
+function displayRoute(origin, destination, service, display) {
+  service.route({
+    origin: origin,
+    destination: destination,
+    travelMode: 'WALKING',
+    avoidTolls: true
+  }, function(response, status) {
+    if (status === 'OK') {
+      display.setDirections(response);
+    } else {
+      alert('Could not display directions due to: ' + status);
+    }
+  });
+}
+
+function computeTotalDistance(result) {
+  var total = 0;
+  var myroute = result.routes[0];
+  for (var i = 0; i < myroute.legs.length; i++) {
+    total += myroute.legs[i].duration.value;
+  }
+
+  total=total/60;
+  total=Math.round(total);
+  document.getElementById('total').innerHTML = total + ' 分';
+}
+ if (currentInfoWindow) {
+currentInfoWindow.close();
+}
       infoWindow.open(map, marker_around); // 吹き出しの表示
+      currentInfoWindow = infoWindow;
     });
       }
+
 
         function callback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -268,7 +312,7 @@ function createMarker(latlng, icn, place)
 <div id="google_map" style="width:70%;height:500px"></div>
 
 <div class=radio_btn>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;フリーワード検索<br>
+&nbsp;&nbsp;&nbsp;フリーワード検索<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<input id="pac-input" class="controls" type="text" placeholder="例）もんじゃ">
   <form name="maptestform">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
@@ -281,6 +325,7 @@ function createMarker(latlng, icn, place)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
+
 <img id="okiru" src="/images/iearukochann.jpg" onclick="changeIMG()" style="cursor: pointer;
 cursor: hand; float:right; height:200px; padding: 300px 0 0 0;">
 
