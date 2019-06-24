@@ -296,6 +296,7 @@ img[1].src = "/images/iearukochann.jpg";
 
 
 
+
 //画像番号用のグローバル変数
 var cnt=0;
 
