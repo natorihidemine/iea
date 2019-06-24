@@ -210,11 +210,10 @@ function createMarker(latlng, icn, place)
         });
         var placename = place.name;
         var placetypes = place.types;
-            var ot = directions.getDuration();
                 if(place.photos && place.photos.length>=1){
               var placephotos = place.photos[0].getUrl();
 // 吹き出しにカフェの名前を埋め込む
-      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>${ot}</p></div>`;
+      var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p></div>`;
     }
     else{var contentString = `<div class="sample"><p id="place_name">${placename}</p><p id="place_types">${placetypes}</p></div>`}
 
@@ -225,7 +224,6 @@ function createMarker(latlng, icn, place)
 
 
     marker_around.addListener('click', function() { // マーカーをクリックしたとき
-
       infoWindow.open(map, marker_around); // 吹き出しの表示
     });
       }
@@ -245,7 +243,8 @@ function createMarker(latlng, icn, place)
         }
     });
 })
-
+var directionsService = new google.maps.DirectionsService;
+            var ot = directions.getDuration();
 
 
 
