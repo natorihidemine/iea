@@ -45,7 +45,7 @@
 <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
 
 <!--メニュー開閉ボタン-->
-<div id="menubar_hdr" class="close"></div>
+
 <!--メニューの開閉処理条件設定　800px以下-->
 <script>
 if (OCwindowWidth() <= 800) {
