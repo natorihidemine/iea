@@ -103,6 +103,20 @@
           map.fitBounds();
         });
 
+        var myInfoWindow = new google.maps.InfoWindow({
+    // 吹き出しに出す文
+    content: "新宿駅で～す"
+  });
+  // 吹き出しを開く
+  myInfoWindow.open(myMap, markers);
+  // 吹き出しが閉じられたら、マーカークリックで再び開くようにしておく
+  google.maps.event.addListener(myInfoWindow, "closeclick", function() {
+    google.maps.event.addListenerOnce(markers, "click", function(event) {
+      myInfoWindow.open(map, markers);
+    });
+  });
+
+
 var r = $('input[name=tori]:checked').val();
 $('input[name=tori]').click(function(){
 if($(this).val() == r) {
