@@ -100,6 +100,18 @@ var currentInfoWindow = null;
             } else {
               bounds.extend(place.geometry.location);
             }
+            var placename = place.name;
+              var contentstring = `<div class="sample"><p id="place_name">${placename}</p></div>`;
+            var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+      content:  contentstring// 吹き出しに表示する内容
+    });
+
+            for (var i = 0; i < markers.length; i++) {
+            var a_marker = markers[i]
+}
+    a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      infoWindow.open(map, a_marker); // 吹き出しの表示
+    });
           });
           map.fitBounds();
         });
@@ -188,6 +200,18 @@ var input = document.getElementById('pac-input');
             } else {
               bounds.extend(place.geometry.location);
             }
+            var placename = place.name;
+              var contentstring = `<div class="sample"><p id="place_name">${placename}</p></div>`;
+            var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+      content:  contentstring// 吹き出しに表示する内容
+    });
+
+            for (var i = 0; i < markers.length; i++) {
+            var a_marker = markers[i]
+}
+    a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      infoWindow.open(map, a_marker); // 吹き出しの表示
+    });
           });
           map.fitBounds();
         });
