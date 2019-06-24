@@ -116,6 +116,10 @@ var currentInfoWindow = null;
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      if (currentInfoWindow) {
+currentInfoWindow.close();
+}
+      currentInfoWindow = infoWindow;
       infoWindow.open(map, a_marker); // 吹き出しの表示
     });
           });
@@ -216,6 +220,11 @@ var input = document.getElementById('pac-input');
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      if (currentInfoWindow) {
+currentInfoWindow.close();
+}
+
+      currentInfoWindow = infoWindow;
       infoWindow.open(map, a_marker); // 吹き出しの表示
     });
           });
@@ -225,7 +234,7 @@ var input = document.getElementById('pac-input');
 if(r!=false){
 var request = {
           location: latlng,
-          radius: '1500',
+          radius: '700',
           type: [r], // https://developers.google.com/places/supported_types 参照
         };
         service = new google.maps.places.PlacesService(map);
