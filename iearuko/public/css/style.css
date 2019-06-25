@@ -218,7 +218,7 @@ header #logo a {
   margin     : auto;      /* サンプルは中央寄せの背景：白 */
   background : #fff;
 }
- 
+
  /*=== 画像の設定 ======================================= */
 .slide img {
   display    : block;

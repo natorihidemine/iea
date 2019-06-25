@@ -48,29 +48,30 @@ var currentInfoWindow = null;
             //中心に戻るボタン
             var ingressButtonDiv = document.createElement("div");
     var ingressButton = new ingressControl(ingressButtonDiv, map);
-    
-    ingressButtonDiv.index = 1;
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ingressButtonDiv);
 
-  
+    ingressButtonDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(ingressButtonDiv);
+
   function ingressControl(buttonDiv, map) {
     var buttonUI = document.createElement("div");
-    buttonUI.style.backgroundColor = "rgb(0, 79, 74)";
-    buttonUI.style.border = "1px solid #59fbea";
+    buttonUI.style.backgroundColor = "#fff";
+    buttonUI.style.border = "2px solid #ee82a8";
     buttonUI.style.boxShadow = "rgba(0, 0, 0, 0.3) 0px 1px 4px -1px";
     buttonUI.style.cursor = "pointer";
-    buttonUI.style.padding = "1px 6px";
-    
-    buttonUI.style.color = "#59fbea";
-    buttonUI.style.fontFamily = "Coda, Arial,sans-serif";
+    buttonUI.style.padding = "6px 6px";
+    buttonUI.style.verticalalign= "middle";
+    buttonUI.style.height = "25px";
+
+    buttonUI.style.color = "#ee82a8";
     buttonUI.style.fontSize = "15px";
     buttonUI.style.textAlign = "center";
-  
-    buttonUI.title = "Center button";
-    buttonUI.innerHTML = "Center button";
-    buttonDiv.style.padding = "5px";
+
+    buttonUI.title = "物件の位置に戻る";
+    buttonUI.innerHTML = "物件の位置に戻る";
+    buttonDiv.style.padding = "10px";
+    buttonDiv.style.margin = "0 0 0 auto";
     buttonDiv.appendChild(buttonUI);
-    
+
     google.maps.event.addDomListener(buttonUI, "click", function() {
  map.panTo(results[0].geometry.location);
     });
