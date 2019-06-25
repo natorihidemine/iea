@@ -362,7 +362,11 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
+  if(total>=100){
+    document.getElementById('total').innerHTML = ' ';
+  }else{
   document.getElementById('total').innerHTML = total + ' 分';
+}
 }
       if (currentInfoWindow) {
 currentInfoWindow.close();
