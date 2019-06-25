@@ -366,7 +366,7 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
-  if(total>=100||total==0){
+  if(total>=100){
     document.getElementById('total').innerHTML = ' 不明';
   }else{
   document.getElementById('total').innerHTML = total + ' 分';
