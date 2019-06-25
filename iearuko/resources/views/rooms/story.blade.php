@@ -14,7 +14,7 @@
   <h2> 家ある子ちゃんについてのお願い</h2>
   <div class="kensaku"style="background-image: url('/images/background_winter2.png ');background-size:cover;color: #FFFFFF">
     <div class="twitterwrap" style="float:right; margin: 10px 0 0 0;">
-    <a class="twitter-timeline" width="320px" height="400px"  href="https://twitter.com/ienashikochan?ref_src=twsrc%5Etfw">Tweets by ienashikochan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" width="320px" height="400px" data-border-color="#ee82a8" data-link-color="#ee82a8" href="https://twitter.com/ienashikochan?ref_src=twsrc%5Etfw">Tweets by ienashikochan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 
   20XX年末、家ある子(23)はうんざりしている。<br>
