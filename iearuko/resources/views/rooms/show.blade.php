@@ -183,7 +183,11 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
+  if(total>=100){
+    document.getElementById('total').innerHTML = ' 不明';
+  }else{
   document.getElementById('total').innerHTML = total + ' 分';
+}
 }
       if (currentInfoWindow) {
 currentInfoWindow.close();
@@ -362,7 +366,7 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
-  if(total>=100){
+  if(total>=100||total==0){
     document.getElementById('total').innerHTML = ' 不明';
   }else{
   document.getElementById('total').innerHTML = total + ' 分';
@@ -447,7 +451,7 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
-  if(total>=100){
+  if(total>=100||status!='OK'){
     document.getElementById('total').innerHTML = ' 不明';
   }else{
   document.getElementById('total').innerHTML = total + ' 分';
