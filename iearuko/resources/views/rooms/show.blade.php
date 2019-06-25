@@ -116,6 +116,43 @@ var currentInfoWindow = null;
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
+var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer({
+  });
+
+  directionsDisplay.addListener('directions_changed', function() {
+    computeTotalDistance(directionsDisplay.getDirections());
+  });
+
+  displayRoute('{{$round->address}}', placename, directionsService,
+      directionsDisplay);
+
+function displayRoute(origin, destination, service, display) {
+  service.route({
+    origin: origin,
+    destination: destination,
+    travelMode: 'WALKING',
+    avoidTolls: true
+  }, function(response, status) {
+    if (status === 'OK') {
+      display.setDirections(response);
+    } else {
+      alert('Could not display directions due to: ' + status);
+    }
+  });
+}
+
+function computeTotalDistance(result) {
+  var total = 0;
+  var myroute = result.routes[0];
+  for (var i = 0; i < myroute.legs.length; i++) {
+    total += myroute.legs[i].duration.value;
+  }
+
+  total=total/60;
+  total=Math.round(total);
+  document.getElementById('total').innerHTML = total + ' 分';
+}
       if (currentInfoWindow) {
 currentInfoWindow.close();
 }
@@ -211,7 +248,12 @@ var input = document.getElementById('pac-input');
               bounds.extend(place.geometry.location);
             }
             var placename = place.name;
-              var contentstring = `<div class="sample"><p id="place_name">${placename}</p></div>`;
+              if(place.photos && place.photos.length>=1){
+              var placephotos = place.photos[0].getUrl();
+// 吹き出しにカフェの名前を埋め込む
+      var contentstring = `<div class="sample"><p>${placename}</p><p>${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>所要時間: <span id="total"></span></p></div>`;
+    }
+    else{var contentstring = `<div class="sample"><p>${placename}</p><p>${placetypes}</p><p>所要時間: <span id="total"></span></p></div>`}
             var infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
       content:  contentstring// 吹き出しに表示する内容
     });
@@ -220,10 +262,46 @@ var input = document.getElementById('pac-input');
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer({
+  });
+
+  directionsDisplay.addListener('directions_changed', function() {
+    computeTotalDistance(directionsDisplay.getDirections());
+  });
+
+  displayRoute('{{$round->address}}', placename, directionsService,
+      directionsDisplay);
+
+function displayRoute(origin, destination, service, display) {
+  service.route({
+    origin: origin,
+    destination: destination,
+    travelMode: 'WALKING',
+    avoidTolls: true
+  }, function(response, status) {
+    if (status === 'OK') {
+      display.setDirections(response);
+    } else {
+      alert('Could not display directions due to: ' + status);
+    }
+  });
+}
+
+function computeTotalDistance(result) {
+  var total = 0;
+  var myroute = result.routes[0];
+  for (var i = 0; i < myroute.legs.length; i++) {
+    total += myroute.legs[i].duration.value;
+  }
+
+  total=total/60;
+  total=Math.round(total);
+  document.getElementById('total').innerHTML = total + ' 分';
+}
       if (currentInfoWindow) {
 currentInfoWindow.close();
 }
-
       currentInfoWindow = infoWindow;
       infoWindow.open(map, a_marker); // 吹き出しの表示
     });
