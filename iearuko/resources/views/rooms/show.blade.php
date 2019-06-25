@@ -45,7 +45,37 @@ var currentInfoWindow = null;
             disableAutoPan: true,
           };
             var marker = new google.maps.Marker(markerOptions);
+            //中心に戻るボタン
+            var ingressButtonDiv = document.createElement("div");
+    var ingressButton = new ingressControl(ingressButtonDiv, map);
+    
+    ingressButtonDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ingressButtonDiv);
 
+  
+  function ingressControl(buttonDiv, map) {
+    var buttonUI = document.createElement("div");
+    buttonUI.style.backgroundColor = "rgb(0, 79, 74)";
+    buttonUI.style.border = "1px solid #59fbea";
+    buttonUI.style.boxShadow = "rgba(0, 0, 0, 0.3) 0px 1px 4px -1px";
+    buttonUI.style.cursor = "pointer";
+    buttonUI.style.padding = "1px 6px";
+    
+    buttonUI.style.color = "#59fbea";
+    buttonUI.style.fontFamily = "Coda, Arial,sans-serif";
+    buttonUI.style.fontSize = "15px";
+    buttonUI.style.textAlign = "center";
+  
+    buttonUI.title = "Center button";
+    buttonUI.innerHTML = "Center button";
+    buttonDiv.style.padding = "5px";
+    buttonDiv.appendChild(buttonUI);
+    
+    google.maps.event.addDomListener(buttonUI, "click", function() {
+ map.panTo(results[0].geometry.location);
+    });
+  }
+//フリーワード検索
             var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_RIGHT];
@@ -116,6 +146,7 @@ var currentInfoWindow = null;
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
+      //directions api起動
 var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer({
   });
@@ -163,6 +194,7 @@ currentInfoWindow.close();
           map.fitBounds();
         });
 
+//ラジオボタンオンの場合わけ
 var r = $('input[name=tori]:checked').val();
 $('input[name=tori]').click(function(){
 if($(this).val() == r) {
@@ -193,6 +225,35 @@ var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
           };
 
 var marker = new google.maps.Marker(markerOptions);
+var ingressButtonDiv = document.createElement("div");
+    var ingressButton = new ingressControl(ingressButtonDiv, map);
+    
+    ingressButtonDiv.index = 1;
+    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ingressButtonDiv);
+
+  
+  function ingressControl(buttonDiv, map) {
+    var buttonUI = document.createElement("div");
+    buttonUI.style.backgroundColor = "rgb(0, 79, 74)";
+    buttonUI.style.border = "1px solid #59fbea";
+    buttonUI.style.boxShadow = "rgba(0, 0, 0, 0.3) 0px 1px 4px -1px";
+    buttonUI.style.cursor = "pointer";
+    buttonUI.style.padding = "1px 6px";
+    
+    buttonUI.style.color = "#59fbea";
+    buttonUI.style.fontFamily = "Coda, Arial,sans-serif";
+    buttonUI.style.fontSize = "15px";
+    buttonUI.style.textAlign = "center";
+  
+    buttonUI.title = "Center button";
+    buttonUI.innerHTML = "Center button";
+    buttonDiv.style.padding = "5px";
+    buttonDiv.appendChild(buttonUI);
+    
+    google.maps.event.addDomListener(buttonUI, "click", function() {
+ map.panTo(results[0].geometry.location);
+    });
+  }
 var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_RIGHT];
