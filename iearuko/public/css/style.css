@@ -213,7 +213,7 @@ header #logo a {
   position   : relative;
   overflow   : hidden;
                     /* 画像のサイズに合わせて変更ください */
-  width      : 1300px;
+  width      : 126%;
   height     : 450px;
   margin     : auto;      /* サンプルは中央寄せの背景：白 */
   background : #fff;
