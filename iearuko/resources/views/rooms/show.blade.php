@@ -232,7 +232,7 @@ var ingressButtonDiv = document.createElement("div");
     ingressButtonDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(ingressButtonDiv);
 
-  
+
   function ingressControl(buttonDiv, map) {
     var buttonUI = document.createElement("div");
     buttonUI.style.backgroundColor = "rgb(0, 79, 74)";
@@ -240,17 +240,17 @@ var ingressButtonDiv = document.createElement("div");
     buttonUI.style.boxShadow = "rgba(0, 0, 0, 0.3) 0px 1px 4px -1px";
     buttonUI.style.cursor = "pointer";
     buttonUI.style.padding = "1px 6px";
-    
+
     buttonUI.style.color = "#59fbea";
     buttonUI.style.fontFamily = "Coda, Arial,sans-serif";
     buttonUI.style.fontSize = "15px";
     buttonUI.style.textAlign = "center";
-  
+
     buttonUI.title = "Center button";
     buttonUI.innerHTML = "Center button";
     buttonDiv.style.padding = "5px";
     buttonDiv.appendChild(buttonUI);
-    
+
     google.maps.event.addDomListener(buttonUI, "click", function() {
  map.panTo(results[0].geometry.location);
     });
@@ -491,19 +491,19 @@ currentInfoWindow.close();
 <div id="google_map" style="width:70%;height:500px"></div>
 
 <div class=radio_btn>
-&nbsp;&nbsp;&nbsp;フリーワード検索<br>
+フリーワード検索<br>
 <input id="pac-input" class="controls" type="text" placeholder="例）もんじゃ">
   <form name="maptestform">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="supermarket" >スーパー<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="home_goods_store" >ホームセンター<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="restaurant" >飲食店<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="laundry" >クリーニング<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="bank" >銀行<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="hospital" >病院<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="school" >学校<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="gym" >ジム</div>
+<input type="radio" name="tori" value="convenience_store">コンビニ<br>
+<input type="radio" name="tori" value="supermarket" >スーパー<br>
+<input type="radio" name="tori" value="home_goods_store" >ホームセンター<br>
+<input type="radio" name="tori" value="restaurant" >飲食店<br>
+<input type="radio" name="tori" value="laundry" >クリーニング<br>
+<input type="radio" name="tori" value="bank" >銀行<br>
+<input type="radio" name="tori" value="hospital" >病院<br>
+<input type="radio" name="tori" value="veterinary_care" >動物病院<br>
+<input type="radio" name="tori" value="school" >学校<br>
+<input type="radio" name="tori" value="gym" >ジム</div>
 
 <img id="okiru" src="/images/iearukochann.jpg" onclick="changeIMG()" style="cursor: pointer;
 cursor: hand; float:right; height:200px; padding: 300px 0 0 0;">
