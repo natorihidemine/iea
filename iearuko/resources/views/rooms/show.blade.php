@@ -208,7 +208,7 @@ if($(this).val() == r) {
         } else {
             r = $(this).val();
         }
- var address = "{{$round->address}}";
+var address = "{{$round->address}}";
     geocoder.geocode({'address': address,'language':'ja'},function(results, status){
         if (status == google.maps.GeocoderStatus.OK){
             var latlng=results[0].geometry.location;//緯度と経度を取得
@@ -218,20 +218,20 @@ if($(this).val() == r) {
                 mapTypeId: google.maps.MapTypeId.ROADMAP//普通の道路マップ
 
             };
-            var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
+var map = new google.maps.Map(document.getElementById('google_map'),mapOpt);
           var markerOptions = {
              map: map,
             position: map.getCenter(),
             icon: '/images/homeicon.png', //新しく指定
-            disableAutoPan: true,
           };
-            var marker = new google.maps.Marker(markerOptions);
-            //中心に戻るボタン
-            var ingressButtonDiv = document.createElement("div");
+
+var marker = new google.maps.Marker(markerOptions);
+var ingressButtonDiv = document.createElement("div");
     var ingressButton = new ingressControl(ingressButtonDiv, map);
 
     ingressButtonDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(ingressButtonDiv);
+
 
   function ingressControl(buttonDiv, map) {
     var buttonUI = document.createElement("div");
@@ -252,13 +252,11 @@ if($(this).val() == r) {
     buttonDiv.style.padding = "10px";
     buttonDiv.style.margin = "0 0 0 auto";
     buttonDiv.appendChild(buttonUI);
-
     google.maps.event.addDomListener(buttonUI, "click", function() {
  map.panTo(results[0].geometry.location);
     });
   }
-//フリーワード検索
-            var input = document.getElementById('pac-input');
+var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_RIGHT];
 
@@ -313,8 +311,7 @@ if($(this).val() == r) {
               bounds.extend(place.geometry.location);
             }
             var placename = place.name;
-        var placetypes = place.types;
-                if(place.photos && place.photos.length>=1){
+              if(place.photos && place.photos.length>=1){
               var placephotos = place.photos[0].getUrl();
 // 吹き出しにカフェの名前を埋め込む
       var contentstring = `<div class="sample"><p>${placename}</p><p>${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>所要時間: <span id="total"></span></p></div>`;
@@ -328,8 +325,7 @@ if($(this).val() == r) {
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
-      //directions api起動
-var directionsService = new google.maps.DirectionsService;
+      var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer({
   });
 
