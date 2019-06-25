@@ -492,7 +492,7 @@ currentInfoWindow.close();
 
 <div class=radio_btn>
 &nbsp;&nbsp;&nbsp;フリーワード検索<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<input id="pac-input" class="controls" type="text" placeholder="例）もんじゃ">
+<input id="pac-input" class="controls" type="text" placeholder="例）もんじゃ">
   <form name="maptestform">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="convenience_store">コンビニ<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="tori" value="supermarket" >スーパー<br>
