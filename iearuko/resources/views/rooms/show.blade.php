@@ -352,7 +352,7 @@ function displayRoute(origin, destination, service, display) {
     if (status === 'OK') {
       display.setDirections(response);
     } else {
-      alert('Could not display directions due to: ' + status);
+      document.getElementById('total').innerHTML = ' 不明';
     }
   });
 }
@@ -437,7 +437,7 @@ function displayRoute(origin, destination, service, display) {
     if (status === 'OK') {
       display.setDirections(response);
     } else {
-      alert('Could not display directions due to: ' + status);
+      document.getElementById('total').innerHTML = ' 不明';
     }
   });
 }
@@ -451,7 +451,7 @@ function computeTotalDistance(result) {
 
   total=total/60;
   total=Math.round(total);
-  if(total>=100||status!='OK'){
+  if(total>=100){
     document.getElementById('total').innerHTML = ' 不明';
   }else{
   document.getElementById('total').innerHTML = total + ' 分';
