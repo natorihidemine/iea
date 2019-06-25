@@ -256,7 +256,7 @@ var ingressButtonDiv = document.createElement("div");
  map.panTo(results[0].geometry.location);
     });
   }
-var input = document.getElementById('pac-input');
+ var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_RIGHT];
 
@@ -311,7 +311,8 @@ var input = document.getElementById('pac-input');
               bounds.extend(place.geometry.location);
             }
             var placename = place.name;
-              if(place.photos && place.photos.length>=1){
+        var placetypes = place.types;
+                if(place.photos && place.photos.length>=1){
               var placephotos = place.photos[0].getUrl();
 // 吹き出しにカフェの名前を埋め込む
       var contentstring = `<div class="sample"><p>${placename}</p><p>${placetypes}</p><p class='picframe'><img src="${placephotos}" class="image_arounds"></p><p>所要時間: <span id="total"></span></p></div>`;
@@ -325,7 +326,8 @@ var input = document.getElementById('pac-input');
             var a_marker = markers[i]
 }
     a_marker.addListener('click', function() { // マーカーをクリックしたとき
-      var directionsService = new google.maps.DirectionsService;
+      //directions api起動
+var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer({
   });
 
