@@ -39,7 +39,7 @@ a:hover {			/*マウスオン時の文字色*/
 
 a.cp_btn {
 	display: block;
-	width: 160px;
+	width: 60%;
 	padding: 0.8em;
 	text-align: center;
 	text-decoration: none;
