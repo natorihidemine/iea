@@ -180,6 +180,30 @@ a.cp_btn:hover {
 	padding-right: 2% !important;
 }
 
+.pagination{
+  color:#696969;
+  padding:0 20px 0 20px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pagination li{
+    display: inline-block;
+}
+
+
+li span{
+  color:#ee82a8;
+  padding:0 20px 0 20px;
+}
+
+li a{
+  color:#696969;
+  padding:0 20px 0 20px;
+}
+
 /*ヘッダー
 ---------------------------------------------------------------------------*/
 /*ヘッダーブロック*/
@@ -402,9 +426,6 @@ header #logo a {
 	margin-right: 2%;	/*写真の右側に空ける余白*/
 }
 
-.pagination li{
-    display: inline-block;
-}
 
 /*一覧ページの各物件ボックス内のテーブル
 ---------------------------------------------------------------------------*/
