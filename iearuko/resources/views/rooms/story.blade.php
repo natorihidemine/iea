@@ -13,6 +13,9 @@
 
   <h2> 家ある子ちゃんについてのお願い</h2>
   <div class="kensaku"style="background-image: url('/images/background_winter2.png ');background-size:cover;color: #FFFFFF">
+    <div class="twitterwrap" style="float:right; margin: 10px 0 0 0;">
+    <a class="twitter-timeline" width="320px" height="400px"  href="https://twitter.com/ienashikochan?ref_src=twsrc%5Etfw">Tweets by ienashikochan</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 
   20XX年末、家ある子(23)はうんざりしている。<br>
 そんな風には見えないだろう。私も誤解していた。<br>
@@ -36,7 +39,8 @@
 どうかあなたにも家なし子ちゃんの物件探しを手伝ってもらいたい。<br>
 周辺情報に詳しい「家ある〜子」を使うときっとスムーズに物件探しができるだろう。<br>
 家なし子ちゃんを家ある子ちゃんに戻してあげてほしい。<br>
-<img src="/images/transnashiko.png"  style="float:right; height: 1000%; width:25%; margin: -250px 0 0 0;"></a>
+
+<img src="/images/transnashiko.png" style="float:right; height: 1000%; width:25%; margin: -250px 0 0 0;"></a>
 
 </div>
 
