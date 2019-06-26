@@ -55,12 +55,16 @@
 </div>
 
 @endforeach
+
 @if($stats[0]==""&&$arranges[0]=="")
 {{$rooms-> appends(['min' => $_GET['min']]) ->appends(['max' => $_GET['max']])->appends(['age' => $_GET['age']]) ->render() }}
 @elseif($arranges[0]==""&&$stats[0]!="")
 {{$rooms-> appends(['min' => $_GET['min']]) ->appends(['max' => $_GET['max']])->appends(['age' => $_GET['age']]) ->appends(['stat' => $_GET['stat']]) ->render() }}
 @elseif($stats[0]==""&&$arranges[0]!="")
 {{$rooms-> appends(['min' => $_GET['min']]) ->appends(['max' => $_GET['max']])->appends(['age' => $_GET['age']]) ->appends(['arrange' => $_GET['arrange']]) ->render() }}
+@elseif($stats[0]!=""&&$arranges[0]!="")
+{{$rooms-> appends(['min' => $_GET['min']]) ->appends(['max' => $_GET['max']])->appends(['age' => $_GET['age']])->appends(['arrange' => $_GET['arrange']]) ->appends(['stat' => $_GET['stat']]) ->render() }}
+
 @endif
 </section>
 
