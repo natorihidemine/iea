@@ -18,7 +18,7 @@
 
 @foreach($rooms as $room)
 <div class="list">
-<figure><img src="{{ $room->image }}" alt="写真の説明"></figure>
+<figure><img src="" alt="写真の説明"></figure>
 <h4>{{ $room->name }}</h4>
 <table>
 <tr>
