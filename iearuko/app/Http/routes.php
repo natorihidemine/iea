@@ -13,7 +13,7 @@
 
 
 
-Route::group(['middleware' => ['web']], function () {
+
 
   Route::get('/', 'RoomsController@index');
 
@@ -25,4 +25,3 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/rooms/search/{id}', 'RoomsController@show');
 
-});
