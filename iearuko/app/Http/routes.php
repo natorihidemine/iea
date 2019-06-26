@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
 
+  Route::get('/', 'RoomsController@index');
+
     Route::get('/rooms', 'RoomsController@index');
 
     Route::get('/rooms/search', 'RoomsController@search');
