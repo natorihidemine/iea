@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         foreach($file as $data) {
           array_push($ary, $data);
         }
+        
 
         array_shift($ary);
         foreach($ary as $data) {
