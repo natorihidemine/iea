@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-<link rel="stylesheet" href="{{asset('css/style.css')}}">
+<link rel="stylesheet" href="{{secure_asset('css/style.css')}}">
 <link rel="stylesheet" href="{{asset('css/slide.css')}}">
 <script src="js/fixmenu.js"></script>
 <script src="js/fixmenu_pagetop.js"></script>
