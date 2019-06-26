@@ -19,11 +19,11 @@ class DatabaseSeeder extends Seeder
         foreach($file as $data) {
           array_push($ary, $data);
         }
-        
+
 
         array_shift($ary);
         foreach($ary as $data) {
-          Rooms::create(
+          Room::create(
             array(
               'name' => $data[1],
               'price' => $data[2],

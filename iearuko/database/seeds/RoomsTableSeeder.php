@@ -22,7 +22,7 @@ class RoomsTableSeeder extends Seeder
 
         array_shift($ary);
         foreach($ary as $data) {
-          Rooms::create(
+          Room::create(
             array(
               'name' => $data[1],
               'price' => $data[2],
