@@ -1,4 +1,4 @@
-id,"name","price","arrangement","age","address","image","created_at","updated_at","train1","train2","train3"
+id,"name",price,"arrangement",age,"address","image","created_at","updated_at","train1","train2","train3"
 1,"月島荘",1000,"5LDK ",5,"東京都中央区月島3丁目26-4","https://osmo-edel.jp/wp/wp-content/uploads/2O2A2932.jpg",NULL,NULL,"東京メトロ有楽町線 月島駅 徒歩10分","都営大江戸線 勝どき駅 徒歩6分 ",NULL
 2,"グラティア日本橋",19,"2LDK",1,"東京都中央区日本橋箱崎町9-3","https://image1.homes.jp/smallimg/image.php?file=http%3A%2F%2Fimg.homes.jp%2Ftavw88n12q5qa11.jpg",NULL,NULL,"東京メトロ半蔵門線 水天宮前駅 徒歩5分","東京メトロ東西線 茅場町駅 徒歩6分",NULL
 3,"プロスペクト日本橋小網町",11,"1K",2,"東京都中央区日本橋小網町17-17","https://image3.homes.jp/smallimg/image.php?file=http%3A%2F%2Fimg.homes.jp%2Fedty88n12q5qavl.jpg",NULL,NULL,"東京メトロ日比谷線 人形町駅 徒歩4分","東京メトロ銀座線 三越前駅 徒歩4分",NULL

@@ -30,9 +30,11 @@ class RoomsTableSeeder extends Seeder
               'age' => $data[4],
               'address' => $data[5],
               'image' => $data[6],
-              'train1' => $data[7],
-              'train2' => $data[8],
-              'train3' => $data[9]
+              'created_at' => $data[7],
+              'updated_at' => $data[8],
+              'train1' => $data[9],
+              'train2' => $data[10],
+              'train3' => $data[11]
             )
           );
         }
