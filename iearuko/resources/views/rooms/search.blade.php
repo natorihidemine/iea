@@ -3,7 +3,7 @@
 @section('content')
 
 <div id="contents">
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/rooms/">ホーム</a></span><span>＞検索結果一覧</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://iearuko.herokuapp.com/rooms/">ホーム</a></span><span>＞検索結果一覧</span>
 
 <div class="inner">
 
@@ -48,7 +48,7 @@
     周辺情報
   </th>
   <td>
-    <a href="/rooms/search/{{$room->id}}" class="cp_btn">土地勘MAP</a>
+    <a href="https://iearuko.herokuapp.com/rooms/search/{{$room->id}}" class="cp_btn">土地勘MAP</a>
   </td>
 </tr>
 </table>

@@ -15,13 +15,13 @@
 
 
 
-  Route::get('/', 'RoomsController@index');
+  Route::get('https://iearuko.herokuapp.com/', 'RoomsController@index');
 
-    Route::get('/rooms', 'RoomsController@index');
+    Route::get('https://iearuko.herokuapp.com/rooms', 'RoomsController@index');
 
-    Route::get('/rooms/search', 'RoomsController@search');
+    Route::get('https://iearuko.herokuapp.com/rooms/search', 'RoomsController@search');
 
-    Route::get('/rooms/story', 'RoomsController@story');
+    Route::get('https://iearuko.herokuapp.com/rooms/story', 'RoomsController@story');
 
-    Route::get('/rooms/search/{id}', 'RoomsController@show');
+    Route::get('https://iearuko.herokuapp.com/rooms/search/{id}', 'RoomsController@show');
 
