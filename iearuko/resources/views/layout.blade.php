@@ -9,9 +9,8 @@
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
 <link rel="stylesheet" href="{{secure_asset('css/style.css')}}">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
-<link rel="stylesheet" href="{{asset('css/slide.css')}}">
-<script src="js/fixmenu.js"></script>
-<script src="js/fixmenu_pagetop.js"></script>
+
+
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
