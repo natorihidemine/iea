@@ -46,12 +46,6 @@
 
 <!--メニュー開閉ボタン-->
 
-<!--メニューの開閉処理条件設定　800px以下-->
-<script>
-if (OCwindowWidth() <= 800) {
-  open_close("menubar_hdr", "menubar-s");
-}
-</script>
 
 </body>
 </html>
