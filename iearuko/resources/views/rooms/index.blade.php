@@ -23,7 +23,7 @@
 
 
 <div class="kensaku">
-<form action='https://iearuko.herokuapp.com/rooms/search' accept_sharset="UTF-8" method="get">
+<form action='/rooms/search' accept_sharset="UTF-8" method="get">
   <div> 賃料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：&nbsp;&nbsp;下限&nbsp;&nbsp;
   <select  type="price" name="min">
 <option value=0 selected>なし</option>

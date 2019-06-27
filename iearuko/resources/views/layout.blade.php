@@ -25,7 +25,7 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="https://iearuko.herokuapp.com/rooms/">家ある〜子   中央区版</a></h1>
+<h1 id="logo"><a href="/rooms/">家ある〜子   中央区版</a></h1>
 </div>
 </header>
 
