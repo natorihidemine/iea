@@ -3,7 +3,7 @@
 @section('content')
 
 <div id="contents">
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/rooms/">ホーム</a></span><span>＞<a href="#" onclick="window.history.back(); return false;">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/">ホーム</a></span><span>＞<a href="#" onclick="window.history.back(); return false;">検索結果一覧</a></span><span>>{{$round->name}}土地勘MAP</span>
 
 <div class="inner">
 

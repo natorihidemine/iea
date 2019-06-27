@@ -109,21 +109,8 @@
 
 </form>
 
-<script src="{{ asset('assets/javascripts/jquery-3.4.1.js') }}"></script>
 
-<script type="text/javascript">
-window.addEventListener("load", function() {
-  var btn = document.querySelector("input[name=stat]");
 
-  function printHello() {
-     var p = document.querySelector("p");
-    p.innerText="Hello world";
-  }
-
-  btn.addEventListener("click", printHello);
-});
-
-</script>
 </div>
 
 
