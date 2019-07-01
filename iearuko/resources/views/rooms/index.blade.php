@@ -134,10 +134,7 @@
                 $("#output").text(checkedBtns.join(", "));
             });
         </script>
-
   <body>
-  <hr/>
-
 
 </div>
 
