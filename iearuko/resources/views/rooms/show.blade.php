@@ -167,7 +167,7 @@ function displayRoute(origin, destination, service, display) {
     if (status === 'OK') {
       display.setDirections(response);
     } else {
-      alert('Could not display directions due to: ' + status);
+      document.getElementById('total').innerHTML = ' 不明';
     }
   });
 }
