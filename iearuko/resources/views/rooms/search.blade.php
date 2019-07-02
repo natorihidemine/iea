@@ -33,7 +33,9 @@
 @endif
 
 </div>
-
+@if(count($roo)==0)
+<div class="box">条件に一致する物件はありませんでした</div>
+@endif
 @foreach($rooms as $room)
 <div class="list">
 <figure><img src="{{ $room->image }}" alt="写真の説明"></figure>
