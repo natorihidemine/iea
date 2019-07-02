@@ -15,6 +15,19 @@
 
 <h2>検索結果一覧（&nbsp;{{count($roo)}}件&nbsp;）</h2>
 
+<div>賃料:{{$min}}〜{{$max}} 築年数:{{$age}}
+
+駅:@if($stats[0]=="")全て
+@else
+@foreach($stats as $stat){{$stat}}
+@endforeach
+@endif
+
+間取り:@if($arranges[0]=="")指定なし
+@else
+@foreach($arranges as $arrange){{$arrange}}
+@endforeach
+@endif</div>
 
 @foreach($rooms as $room)
 <div class="list">

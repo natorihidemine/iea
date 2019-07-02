@@ -73,8 +73,13 @@ $roo=$rooms->orderBy('id','ASC')->get();
 $rooms=$rooms->orderBy('id','ASC')->paginate(5);
 $rooms->setPath('');
 
+$stats = str_replace('線', '', $stats);
 
-  return view('rooms.search')->with(array('rooms'=>$rooms,'roo'=>$roo,'stats'=>$stats,'arranges'=>$arranges));
+if($min==0){$min="なし";}else{$min=$min."万円";}
+if($max==10000000000000000000){$max="なし";}else{$max=$max."万円";}
+if($age==1000000){$age="指定なし";}elseif($age==0){$age="新築";}else{$age=$age."年";}
+
+  return view('rooms.search')->with(array('rooms'=>$rooms,'roo'=>$roo,'stats'=>$stats,'arranges'=>$arranges,'min'=>$min,'max'=>$max,'age'=>$age));
     //
 }
 
