@@ -15,19 +15,24 @@
 
 <h2>検索結果一覧（&nbsp;{{count($roo)}}件&nbsp;）</h2>
 
-<div>賃料:下限{{$min}}〜上限{{$max}} 築年数:{{$age}}
+<div class="box">
+賃料&nbsp;:&nbsp;下限{{$min}}〜上限{{$max}} &nbsp;&nbsp;&nbsp;&nbsp;
 
-駅:@if($stats[0]=="")全て
-@else
-@foreach($stats as $stat){{$stat}}
-@endforeach
-@endif
+築年数&nbsp;:&nbsp;{{$age}}&nbsp;&nbsp;&nbsp;&nbsp;
 
 間取り:@if($arranges[0]=="")指定なし
 @else
 @foreach($arranges as $arrange){{$arrange}}
 @endforeach
-@endif</div>
+@endif<br>
+
+駅&nbsp;:&nbsp;@if($stats[0]=="")全て
+@else
+@foreach($stats as $stat){{$stat}}
+@endforeach
+@endif
+
+</div>
 
 @foreach($rooms as $room)
 <div class="list">

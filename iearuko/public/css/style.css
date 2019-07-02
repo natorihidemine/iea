@@ -375,6 +375,16 @@ header #logo a {
 /*物件一覧ページの各ブロック
 ---------------------------------------------------------------------------*/
 /*各ボックスの設定*/
+#contents .main .box {
+  position: relative;overflow: hidden;
+  margin-bottom: 20px;  /*ボックスの下に空ける余白*/
+  text-decoration: none;display: block;overflow: hidden;
+  border: 1px solid #dcdcdc;  /*枠線の幅、線種、色*/
+  padding: 3%;  /*ボックス内の余白*/
+  background: #fff; /*背景色*/
+  width: 120%;
+}
+
 #contents .main .list {
 	position: relative;overflow: hidden;
 	margin-bottom: 20px;	/*ボックスの下に空ける余白*/
