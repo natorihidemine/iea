@@ -15,7 +15,7 @@
 
 <h2>検索結果一覧（&nbsp;{{count($roo)}}件&nbsp;）</h2>
 
-<div>賃料:{{$min}}〜{{$max}} 築年数:{{$age}}
+<div>賃料:下限{{$min}}〜上限{{$max}} 築年数:{{$age}}
 
 駅:@if($stats[0]=="")全て
 @else
