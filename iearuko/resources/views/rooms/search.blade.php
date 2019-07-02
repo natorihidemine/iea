@@ -20,15 +20,15 @@
 
 築年数&nbsp;:&nbsp;{{$age}}&nbsp;&nbsp;&nbsp;&nbsp;
 
-間取り:@if($arranges[0]=="")指定なし
+間取り&nbsp;:&nbsp;@if($arranges[0]=="")指定なし
 @else
-@foreach($arranges as $arrange){{$arrange}}
+@foreach($arranges as $arrange){{$arrange}}&nbsp;&nbsp;
 @endforeach
 @endif<br>
 
 駅&nbsp;:&nbsp;@if($stats[0]=="")全て
 @else
-@foreach($stats as $stat){{$stat}}
+@foreach($stats as $stat){{$stat}}&nbsp;&nbsp;
 @endforeach
 @endif
 
