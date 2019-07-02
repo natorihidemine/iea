@@ -113,6 +113,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
             var stat = document.getElementsByName('stat[]');
+            var checkedBtns = [];
+                for (var i = 0; i < stat.length; i++) {
+                    if (stat[i].checked) {
+                      var osValue = $(stat[i]).attr('id');
+                      var osText = $('label[for="' + osValue + '"]').text();
+                      var already_flag = false;
+                for(var k = 0; k < i; k++){
+                    if(checkedBtns[k] == osText){
+                      already_flag = true;
+                    }
+                  }
+                  if(!already_flag){
+                    checkedBtns.push(osText);
+                  }
+
+                    }
+                }
+                $("#output").text(checkedBtns.join("、"));
             $(stat).click(function() {
                 var checkedBtns = [];
                 for (var i = 0; i < stat.length; i++) {
