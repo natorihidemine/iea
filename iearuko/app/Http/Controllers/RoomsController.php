@@ -74,6 +74,7 @@ $rooms=$rooms->orderBy('id','ASC')->paginate(5);
 $rooms->setPath('');
 
 $stats = str_replace('線', '', $stats);
+$stats = str_replace('駅', '', $stats);
 
 if($min==0){$min="なし";}else{$min=$min."万円";}
 if($max==10000000000000000000){$max="なし";}else{$max=$max."万円";}
