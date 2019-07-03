@@ -190,8 +190,13 @@ function computeTotalDistance(result) {
       if (currentInfoWindow) {
 currentInfoWindow.close();
 }
+if(infoWindow==currentInfoWindow){
+  currentInfoWindow = null;
+infoWindow.close();
+}else{
       currentInfoWindow = infoWindow;
-      infoWindow.open(map, a_marker); // 吹き出しの表示
+      infoWindow.open(map, a_marker);
+      } // 吹き出しの表示
     });
           });
           map.fitBounds();
@@ -370,11 +375,16 @@ function computeTotalDistance(result) {
   document.getElementById('total').innerHTML = total + ' 分';
 }
 }
-      if (currentInfoWindow) {
+if (currentInfoWindow) {
 currentInfoWindow.close();
 }
+if(infoWindow==currentInfoWindow){
+  currentInfoWindow = null;
+infoWindow.close();
+}else{
       currentInfoWindow = infoWindow;
-      infoWindow.open(map, a_marker); // 吹き出しの表示
+      infoWindow.open(map, a_marker);
+      } // 吹き出しの表示
     });
           });
           map.fitBounds();
@@ -455,11 +465,16 @@ function computeTotalDistance(result) {
   document.getElementById('total').innerHTML = total + ' 分';
 }
 }
- if (currentInfoWindow) {
+if (currentInfoWindow) {
 currentInfoWindow.close();
 }
-      infoWindow.open(map, marker_around); // 吹き出しの表示
+if(infoWindow==currentInfoWindow){
+  currentInfoWindow = null;
+infoWindow.close();
+}else{
       currentInfoWindow = infoWindow;
+      infoWindow.open(map, marker_around);
+      } // 吹き出しの表示
     });
       }
 
